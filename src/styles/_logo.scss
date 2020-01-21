@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Barrio&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+
+
+.logo-div{
+    display: flex;
+    align-items: center;
+    h1{
+        color: white;
+        font-family: 'Barrio', cursive;
+        font-size: 60px;
+        letter-spacing: 4px;
+
+        span{
+            color: #33c24a;
+            font-family: 'Gloria Hallelujah', cursive;
+            font-size: 83px;
+        }
+    }
+    .logo-content{
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+}

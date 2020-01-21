@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Barrio&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  background-image: url("../img/cover1.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+}
+
+.logo-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-div h1 {
+  color: white;
+  font-family: 'Barrio', cursive;
+  font-size: 60px;
+  letter-spacing: 4px;
+}
+
+.logo-div h1 span {
+  color: #33c24a;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 83px;
+}
+
+.logo-div .logo-content {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
