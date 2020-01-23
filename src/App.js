@@ -3,7 +3,6 @@ import './styles/style.css';
 import { Logo } from './components/Logo';
 import { Container } from './components/Container';
 import { Route, Switch } from 'react-router-dom';
-import { CompetitionProvider } from './context';
 import { ItalyLeague } from './pages/ItalyLeague';
 import { ChampionsLeague } from './pages/ChampionsLeague';
 import { EnglandLeague } from './pages/EnglandLeague';
@@ -14,7 +13,6 @@ import { SpanishLeague } from './pages/SpanishLeague';
 
 function App() {
   return (
-    // <CompetitionProvider>
     <div className="App">
       <Logo />
 
@@ -29,7 +27,6 @@ function App() {
       </Switch>
 
     </div>
-    // </CompetitionProvider>
   );
 }
 

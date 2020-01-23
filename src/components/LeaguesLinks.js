@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import serieA from '../img/serie a 1.png';
 import championLeague from '../img/champions league 1.png';
 import laLiga from '../img/la liga 1.png';
 import franceLeague from '../img/france ligue 1.png';
 import bundesLeague from '../img/Bundesliga 1.png';
 import premierLeague from '../img/premier3.png';
-import { CompetitionContext } from '../context';
 import { Link } from 'react-router-dom';
 
 
@@ -18,7 +17,7 @@ export const LeaguesLinks = () => {
 
             <div className="all-cards">
 
-                <div className="card">
+                <div className="my-card">
                     <Link to='champions-league/2001'>
                         <div className="img-div">
                             <img src={championLeague} alt="" />
@@ -30,7 +29,7 @@ export const LeaguesLinks = () => {
                     </Link>
                 </div>
 
-                <div className="card">
+                <div className="my-card">
                     <Link to='/spanish/2015'>
                         <div className="img-div">
                             <img src={laLiga} alt="" />
@@ -42,7 +41,7 @@ export const LeaguesLinks = () => {
                     </Link>
                 </div>
 
-                <div className="card">
+                <div className="my-card">
                     <Link to='/england/2021'>
                         <div className="img-div">
                             <img src={premierLeague} alt="" />
@@ -54,7 +53,7 @@ export const LeaguesLinks = () => {
                     </Link>
                 </div>
 
-                <div className="card">
+                <div className="my-card">
                     <Link to='/italy/2019'>
                         <div className="img-div">
                             <img src={serieA} alt="" />
@@ -66,7 +65,7 @@ export const LeaguesLinks = () => {
                     </Link>
                 </div>
 
-                <div className="card">
+                <div className="my-card">
                     <Link to='/germany/2002'>
                         <div className="img-div">
                             <img src={bundesLeague} alt="" />
@@ -78,7 +77,7 @@ export const LeaguesLinks = () => {
                     </Link>
                 </div>
 
-                <div className="card">
+                <div className="my-card">
                     <Link to='france/2015'>
                         <div className="img-div">
                             <img src={franceLeague} alt="" />

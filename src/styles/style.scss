@@ -12,7 +12,10 @@
     background-position: center;
 }
 
+@import './variables';
+@import './mixins';
 @import './logo';
 @import './leaguesLinks';
 @import './matchesResults';
 @import './container';
+@import './calendar';
