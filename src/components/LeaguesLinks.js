@@ -17,17 +17,7 @@ export const LeaguesLinks = () => {
 
             <div className="all-cards">
 
-                <Link to='champions-league/2001' className='league-link'>
-                    <div className="my-card">
-                        <div className="img-div">
-                            <img src={championLeague} alt="" />
-                        </div>
-                        <div className="info">
-                            {/* <p>Europe</p> */}
-                            {/* <h3>Champion League</h3> */}
-                        </div>
-                    </div>
-                </Link>
+
 
                 <Link to='/spanish/2015' className='league-link'>
                     <div className="my-card">
@@ -85,6 +75,18 @@ export const LeaguesLinks = () => {
                         <div className="info">
                             {/* <p>France</p> */}
                             {/* <h3>Ligue 1</h3> */}
+                        </div>
+                    </div>
+                </Link>
+
+                <Link to='champions-league/2001' className='league-link'>
+                    <div className="my-card">
+                        <div className="img-div">
+                            <img src={championLeague} alt="" />
+                        </div>
+                        <div className="info">
+                            {/* <p>Europe</p> */}
+                            {/* <h3>Champion League</h3> */}
                         </div>
                     </div>
                 </Link>

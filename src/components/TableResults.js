@@ -42,7 +42,18 @@ export const TableResults = ({
         }
     }
 
-
+    const halfTimeStatus = (halfTimeStatus) => {
+        if (halfTimeStatus === 'FINISHED') {
+            return <div className='halfTime-status'>
+                <span>END</span>
+            </div>
+        }
+        else if (halfTimeStatus === 'PAUSED') {
+            return <div className='halfTime-status'>
+                <span>HT</span>
+            </div>
+        }
+    }
 
     return (
         <div className='table' >
@@ -70,7 +81,6 @@ export const TableResults = ({
                                         </div>
                                         <div className='home-team-name'>
                                             <span>{match.homeTeam.name}</span>
-
                                         </div>
                                     </div>
 
@@ -89,7 +99,10 @@ export const TableResults = ({
                                     </div>
                                     <div className='away-team-name'>
                                         <span>{match.awayTeam.name}</span>
+
                                     </div>
+
+                                    {halfTimeStatus(match.status)}
                                 </td>
                             </tr>
                         )
