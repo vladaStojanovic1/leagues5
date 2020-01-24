@@ -42,6 +42,8 @@ export const TableResults = ({
         }
     }
 
+
+
     return (
         <div className='table' >
             <h1 style={{ color: 'white' }}>Today Matches</h1>
@@ -51,7 +53,7 @@ export const TableResults = ({
             <Table striped hover className='table-component'>
                 <tbody>
                     {currentMatches.map((match, index) => {
-                        console.log(match.score.halfTime.homeTeam)
+                        console.log(match)
                         return (
                             <tr key={index}>
 
@@ -72,10 +74,11 @@ export const TableResults = ({
                                         </div>
                                     </div>
 
-                                    <div className='scores'>
-                                        <span style={{ fontSize: '18px' }}>{match.score.fullTime.homeTeam}</span> -&nbsp;
-                                            <span style={{ fontSize: '18px' }}>{match.score.fullTime.awayTeam}</span>
-
+                                    <div className='scores '>
+                                        <div className={match.status === 'IN_PLAY' ? 'animated infinite flash slower' : null}>
+                                            <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.homeTeam}</span> -&nbsp;
+                                            <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.awayTeam}</span>
+                                        </div>
                                         {match.score.halfTime.homeTeam !== null ?
                                             <div className='half-time-res' >
                                                 (<span>{match.score.halfTime.homeTeam}</span> -&nbsp;

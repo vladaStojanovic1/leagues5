@@ -7,7 +7,7 @@ export const Logo = () => {
 
     return (
         <Link to='/'>
-            <div className='logo-div'>
+            <div className='logo-div '>
                 <div className='logo-content'>
                     <img src={ball} alt="logo-ball" />
                     <h1>Leagues<span>5</span></h1>

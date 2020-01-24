@@ -2,11 +2,25 @@
     color: white;
     cursor: pointer;
     text-align: center;
+    background: azure;
+    opacity: 0.6;
+    padding: 10px;
+    // position: relative;
     img{
-        width: 50%;
+        width: 100%
     }
     .info{
         text-align: center;
+        // position: relative;
+        // padding: 11px;
+        p{
+            color: black;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            // position: absolute;
+            // left: 30px;
+        
+        }
     }
 
    
@@ -14,6 +28,21 @@
 
     .all-cards{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-        grid-row-gap: 60px;
+        grid-template-columns: repeat(auto-fit,minmax(145px,1fr));
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+
+        p{
+            font-family: 'Sarabun', sans-serif;
+            font-weight: bold;
+            color:$my-black !important;
+        }
+    }
+
+    .league-link{
+
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+            color: whitesmoke;
+        }
     }

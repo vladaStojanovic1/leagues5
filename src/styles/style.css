@@ -54,22 +54,43 @@
   color: white;
   cursor: pointer;
   text-align: center;
+  background: azure;
+  opacity: 0.6;
+  padding: 10px;
 }
 
 .my-card img {
-  width: 50%;
+  width: 100%;
 }
 
 .my-card .info {
   text-align: center;
 }
 
+.my-card .info p {
+  color: black;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
 .all-cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-row-gap: 60px;
+  -ms-grid-columns: (minmax(145px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.all-cards p {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: bold;
+  color: #212529 !important;
+}
+
+.league-link:focus, .league-link:hover, .league-link:visited, .league-link:link, .league-link:active {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .table {
@@ -158,6 +179,7 @@
       grid-template-columns: repeat(auto-fit, minmax(415px, 1fr));
   width: 90%;
   margin: auto;
+  grid-column-gap: 135px;
 }
 
 .calendar {

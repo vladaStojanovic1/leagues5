@@ -1,7 +1,7 @@
 import React from 'react'
 import serieA from '../img/serie a 1.png';
-import championLeague from '../img/champions league 1.png';
-import laLiga from '../img/la liga 1.png';
+import championLeague from '../img/uefa-champions-league.png';
+import laLiga from '../img/laliga2.png';
 import franceLeague from '../img/france ligue 1.png';
 import bundesLeague from '../img/Bundesliga 1.png';
 import premierLeague from '../img/premier3.png';
@@ -17,77 +17,77 @@ export const LeaguesLinks = () => {
 
             <div className="all-cards">
 
-                <div className="my-card">
-                    <Link to='champions-league/2001'>
+                <Link to='champions-league/2001' className='league-link'>
+                    <div className="my-card">
                         <div className="img-div">
                             <img src={championLeague} alt="" />
                         </div>
                         <div className="info">
-                            <p>Europe</p>
-                            <h3>Champion League</h3>
+                            {/* <p>Europe</p> */}
+                            {/* <h3>Champion League</h3> */}
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
-                <div className="my-card">
-                    <Link to='/spanish/2015'>
+                <Link to='/spanish/2015' className='league-link'>
+                    <div className="my-card">
                         <div className="img-div">
                             <img src={laLiga} alt="" />
                         </div>
                         <div className="info">
-                            <p>Spanis</p>
-                            <h3>La Liga</h3>
+                            {/* <p>Spanis</p> */}
+                            {/* <h3>La Liga</h3> */}
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
-                <div className="my-card">
-                    <Link to='/england/2021'>
+                <Link to='/england/2021' className='league-link'>
+                    <div className="my-card">
                         <div className="img-div">
                             <img src={premierLeague} alt="" />
                         </div>
                         <div className="info">
-                            <p>England</p>
-                            <h3>Premier League</h3>
+                            {/* <p>England</p> */}
+                            {/* <h3>Premier League</h3> */}
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
-                <div className="my-card">
-                    <Link to='/italy/2019'>
+                <Link to='/italy/2019' className='league-link'>
+                    <div className="my-card">
                         <div className="img-div">
                             <img src={serieA} alt="" />
                         </div>
                         <div className="info">
-                            <p>Italy</p>
-                            <h3>SERIE A</h3>
+                            {/* <p>Italy</p> */}
+                            {/* <h3>SERIE A</h3> */}
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
-                <div className="my-card">
-                    <Link to='/germany/2002'>
+                <Link to='/germany/2002' className='league-link'>
+                    <div className="my-card">
                         <div className="img-div">
                             <img src={bundesLeague} alt="" />
                         </div>
                         <div className="info">
-                            <p>Germany</p>
-                            <h3>Bundesliga</h3>
+                            {/* <p>Germany</p> */}
+                            {/* <h3>Bundesliga</h3> */}
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
-                <div className="my-card">
-                    <Link to='france/2015'>
+                <Link to='france/2015' className='league-link'>
+                    <div className="my-card">
                         <div className="img-div">
                             <img src={franceLeague} alt="" />
                         </div>
                         <div className="info">
-                            <p>France</p>
-                            <h3>Ligue 1</h3>
+                            {/* <p>France</p> */}
+                            {/* <h3>Ligue 1</h3> */}
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
 
             </div>
         </div>
