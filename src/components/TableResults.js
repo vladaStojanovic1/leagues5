@@ -61,10 +61,9 @@ export const TableResults = ({
 
             <Calendar handleDate={handleDate} date={date} />
 
-            <Table striped hover className='table-component'>
+            <Table striped hover className='table-component' >
                 <tbody>
                     {currentMatches.map((match, index) => {
-                        console.log(match)
                         return (
                             <tr key={index}>
 

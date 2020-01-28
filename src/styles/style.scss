@@ -7,7 +7,7 @@
 .App{
     background-image: url('../img/cover1.jpg');
     background-size: cover;
-    height: 100vh;
+    height: 140vh;
     width: 100%;
     background-position: center;
 }
@@ -19,3 +19,4 @@
 @import './matchesResults';
 @import './container';
 @import './calendar';
+@import './otherCompetitions';

@@ -1,0 +1,64 @@
+.td-other-competition{
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr 1fr;
+    align-items: center;
+    padding: 0 !important;
+    line-height: 0.6;
+}
+.image-position{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+
+    img{
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+.won{
+    background: #4caf50ad;
+    padding: 0 7px 0 7px;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+}
+.draw{
+    background: rgb(241, 212, 78);
+    padding: 0 7px 0 7px;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+    margin: 10px;
+
+}
+.lost{
+    background: lightsalmon;
+    padding: 0 7px 0 7px;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+}
+.points{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-column: 3/5;
+   
+    p:nth-child(2){
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 23px;
+    }
+    p{
+        margin-bottom: 0;
+    }
+  
+}
+.team-name{
+    margin-left: 23px;
+    padding: 7px 0 11px 0;
+    p{
+        font-weight: bold;
+    }
+}

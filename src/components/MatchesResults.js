@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment';
-
 import { TableResults } from './TableResults';
 
 
@@ -17,7 +16,6 @@ export const MatchesResults = () => {
     /******* State *******/
 
 
-
     useEffect(() => {
         const currentDay = moment(date).format('YYYY-MM-DD');
         let mounted = true;
@@ -26,20 +24,16 @@ export const MatchesResults = () => {
             const settings = {
                 method: 'GET',
                 headers: {
-                    'X-Auth-Token': '70369ad901764f939fa1d166e7871eb3',
+                    'X-Auth-Token': localStorage.getItem('myToken'),
                 }
             }
-            try {
-                setLoading(true);
-                const data = await fetch(`https://api.football-data.org/v2/matches?dateFrom=${currentDay}&dateTo=${currentDay}`, settings);
-                const res = await data.json();
-                if (mounted) {
-                    setMatches(res.matches);
-                    setLoading(false);
+            setLoading(true);
+            const data = await fetch(`https://api.football-data.org/v2/matches?dateFrom=${currentDay}&dateTo=${currentDay}`, settings);
+            const res = await data.json();
 
-                }
-            } catch (error) {
-                console.log(error);
+            if (mounted) {
+                setMatches(res.matches);
+                setLoading(false);
             }
         }
         fetchMatches();
@@ -48,7 +42,6 @@ export const MatchesResults = () => {
             mounted = false;
         }
     }, [date])
-
 
 
     /*** Date Picker ***/
@@ -64,20 +57,21 @@ export const MatchesResults = () => {
     //Change Page
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
     let matchesLength = matches.length;
-
     /*** Pagination ***/
 
     return (
         <div>
 
-            <TableResults
-                currentMatches={currentMatches}
-                handleDate={handleDate}
-                date={date}
-                matchesPerPage={matchesPerPage}
-                matchesLength={matchesLength}
-                paginate={paginate}
-            />
+            {loading ? <h1 style={{ color: 'white' }}>Loading...</h1> :
+                <TableResults
+                    currentMatches={currentMatches}
+                    handleDate={handleDate}
+                    date={date}
+                    matchesPerPage={matchesPerPage}
+                    matchesLength={matchesLength}
+                    paginate={paginate}
+                />
+            }
         </div>
     )
 }
