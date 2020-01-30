@@ -1,0 +1,83 @@
+/******** Champions League Start *********/
+@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
+.champions-league{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    column-gap: 10px;
+}
+.group-name{
+    color: silver;
+    // font-family: $sarabun-font;
+    text-align: center;
+    font-family: 'Concert One', cursive;
+
+}
+.table{
+    margin-bottom: 0 !important;
+}
+.cl-content{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+}
+.cl-imgAndPostion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    h4{
+        margin-bottom: 0;
+        font-size: 20px;
+        font-family: $sarabun-font;
+        color: $my-silver;
+        margin-right: 10px;
+    }
+    img{
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+
+    }
+}
+    .cl-name{
+        margin-left: 10px;
+        font-family: $sarabun-font;
+        
+        
+        p{
+            margin-bottom: 0 !important;
+            color: $my-silver;
+            font-weight: bold;
+        }
+        .cl-won{
+            @include info-span(#4caf50ad);
+        }
+        .cl-draw{
+            @include info-span(rgb(241, 212, 78));
+            margin: 5px;
+        }
+        .cl-lost{
+            @include info-span(lightsalmon);
+        }
+    }
+.spans{
+    margin-top: 10px;
+}
+    .cl-points{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        p:nth-child(2){
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: 23px;
+            box-shadow: $shadow-points;
+            color: $my-black;
+            font-family: $sarabun-font;
+        }
+        p:nth-child(1){
+            margin-bottom: 0 !important;
+            color: $my-silver;
+            font-family: $sarabun-font;
+        }
+    }
+/******** Champions League Start *********/

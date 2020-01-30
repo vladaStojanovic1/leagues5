@@ -3,3 +3,12 @@
     grid-template-columns: repeat($repeat-column,1fr);
     align-items: center;
 }
+
+@mixin info-span($background-color) {
+    background: $background-color;
+    padding: 0 7px 0 7px;
+    border-radius: 9px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}

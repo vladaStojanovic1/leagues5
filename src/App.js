@@ -10,6 +10,7 @@ const myToken = '70369ad901764f939fa1d166e7871eb3';
 localStorage.setItem('myToken', myToken);
 
 function App() {
+
   return (
     <div className="App">
       <Logo />

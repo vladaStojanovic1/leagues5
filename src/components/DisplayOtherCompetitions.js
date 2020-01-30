@@ -6,18 +6,18 @@ export const DisplayOtherCompetitions = ({ teams }) => {
     return (
         <div className='other-teams'>
 
-            <Table striped style={{ width: '30%' }}>
+            <Table striped >
                 <tbody style={{ background: 'azure' }}>
-                    {teams.map((team) => {
+                    {teams.map((team, index) => {
 
                         return (
-                            <tr>
+                            <tr key={index}>
                                 <td className='td-other-competition'>
 
                                     <div className='image-position'>
                                         <div>
 
-                                            <h4>{team.position}</h4>
+                                            <h4 className='positionNum'>{team.position}</h4>
                                         </div>
                                         <img src={team.image} alt="sss" />
                                     </div>

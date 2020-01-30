@@ -5,7 +5,6 @@ import { DisplayLeagueInfo } from '../components/DisplayLeagueInfo'
 import { DisplayChampionsLeague } from '../components/DisplayChampionsLeague';
 import { DisplayOtherCompetitions } from '../components/DisplayOtherCompetitions';
 
-
 export const LeagueInfo = ({ match }) => {
 
     /****** State ******/
@@ -13,7 +12,6 @@ export const LeagueInfo = ({ match }) => {
     const [championsLeagueGroups, setChampionsLeagueGroups] = useState([]);
     const [scorersStandings, setScorersStandings] = useState([]);
     /****** State ******/
-
 
     useEffect(() => {
         const teamsStandings = async () => {
@@ -32,6 +30,8 @@ export const LeagueInfo = ({ match }) => {
             const filterGroups = res.standings.filter((team) => {
                 return team.type === 'TOTAL';
             })
+
+
             setChampionsLeagueGroups(filterGroups)
             setTeams(teams);
         }
@@ -58,7 +58,7 @@ export const LeagueInfo = ({ match }) => {
 
 
     return (
-        <div className='test'>
+        <div className='test' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
 
             {match.params.id === '2001' ?
                 <DisplayChampionsLeague championsLeagueGroups={championsLeagueGroups} />
