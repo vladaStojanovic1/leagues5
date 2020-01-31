@@ -13,7 +13,6 @@ export const LeaguesLinks = () => {
 
     return (
         <div className='leagues-links'>
-            <h1 style={{ color: 'white' }}>League Links</h1>
 
             <div className="all-cards">
 

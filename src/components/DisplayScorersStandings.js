@@ -3,7 +3,6 @@ import { Table } from 'react-bootstrap';
 
 export const DisplayScorersStandings = ({ scorersStandings }) => {
 
-    console.log(scorersStandings);
 
     return (
         <div className='scorers-standings'>

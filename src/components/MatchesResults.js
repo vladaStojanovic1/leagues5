@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import moment from 'moment';
 import { TableResults } from './TableResults';
 import { ShowInfo } from './ShowInfo';
-
+import { ClockLoader } from "react-spinners";
 
 
 export const MatchesResults = () => {
@@ -65,9 +65,13 @@ export const MatchesResults = () => {
 
 
     return (
-        <div>
+        <div style={{ margin: 'auto' }}>
 
-            {loading ? <h1 style={{ color: 'white' }}>Loading...</h1> :
+            {loading ? <ClockLoader
+                size={150}
+                //size={"150px"} this also works
+                color={"#7cdc35"}
+            /> :
                 <>
                     <TableResults
                         currentMatches={currentMatches}

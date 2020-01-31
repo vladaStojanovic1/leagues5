@@ -5,14 +5,17 @@ import { DisplayLeagueInfo } from '../components/DisplayLeagueInfo'
 import { DisplayChampionsLeague } from '../components/DisplayChampionsLeague';
 import { DisplayOtherCompetitions } from '../components/DisplayOtherCompetitions';
 import { DisplayScorersStandings } from '../components/DisplayScorersStandings';
+import { HashLoader } from "react-spinners";
+
 
 export const LeagueInfo = ({ match }) => {
-    console.log(match);
 
     /****** State ******/
     const [teams, setTeams] = useState([]);
     const [championsLeagueGroups, setChampionsLeagueGroups] = useState([]);
     const [scorersStandings, setScorersStandings] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     /****** State ******/
 
     useEffect(() => {
@@ -23,6 +26,7 @@ export const LeagueInfo = ({ match }) => {
                     'X-Auth-Token': localStorage.getItem('myToken')
                 }
             }
+            setLoading(true)
             const data = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/standings`, settings);
             const res = await data.json();
 
@@ -33,9 +37,10 @@ export const LeagueInfo = ({ match }) => {
                 return team.type === 'TOTAL';
             })
 
-
             setChampionsLeagueGroups(filterGroups)
             setTeams(teams);
+            setLoading(false)
+
         }
 
         const scorersStandings = async () => {
@@ -60,21 +65,29 @@ export const LeagueInfo = ({ match }) => {
 
 
     return (
-        <>
+        <div style={{ margin: 'auto' }}>
 
             {/* Because is a diffrent data from API*/}
             {match.params.id === '2001' ?
                 <div className='champion-league-content'>
-                    <DisplayChampionsLeague championsLeagueGroups={championsLeagueGroups} />
-                    <DisplayScorersStandings scorersStandings={scorersStandings} />
+                    {loading ? <HashLoader size={300} color={"#33c24a"} /> :
+                        <>
+                            <DisplayChampionsLeague championsLeagueGroups={championsLeagueGroups} />
+                            <DisplayScorersStandings scorersStandings={scorersStandings} />
+                        </>
+                    }
                 </div>
                 :
                 <div className='other-leagues-content'>
-                    <DisplayOtherCompetitions teams={teams} />
-                    <DisplayScorersStandings scorersStandings={scorersStandings} />
+                    {loading ? <HashLoader size={300} color={"#7cdc35"} /> :
+                        <>
+                            <DisplayOtherCompetitions teams={teams} />
+                            <DisplayScorersStandings scorersStandings={scorersStandings} />
+                        </>
+                    }
                 </div>
             }
-
-        </>
+        </div>
     )
 }
+

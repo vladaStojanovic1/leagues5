@@ -3,8 +3,7 @@ import { LeaguesLinks } from './LeaguesLinks';
 import { MatchesResults } from './MatchesResults';
 
 
-export const Container = ({ match }) => {
-    console.log(match);
+export const Container = () => {
 
     return (
         <div className='container-content'>

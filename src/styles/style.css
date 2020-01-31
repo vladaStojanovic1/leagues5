@@ -469,6 +469,13 @@
   grid-column: 4/7;
 }
 
+.css-17bedyk {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  margin: auto;
+}
+
 .tr-scorers:nth-child(1) {
   background: url("../img/cover-soccer.jpg");
   background-size: cover;
