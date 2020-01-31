@@ -4,8 +4,10 @@ import { ScorerInfo } from '../entities/ScorerInfo';
 import { DisplayLeagueInfo } from '../components/DisplayLeagueInfo'
 import { DisplayChampionsLeague } from '../components/DisplayChampionsLeague';
 import { DisplayOtherCompetitions } from '../components/DisplayOtherCompetitions';
+import { DisplayScorersStandings } from '../components/DisplayScorersStandings';
 
 export const LeagueInfo = ({ match }) => {
+    console.log(match);
 
     /****** State ******/
     const [teams, setTeams] = useState([]);
@@ -58,12 +60,21 @@ export const LeagueInfo = ({ match }) => {
 
 
     return (
-        <div className='test' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+        <>
 
+            {/* Because is a diffrent data from API*/}
             {match.params.id === '2001' ?
-                <DisplayChampionsLeague championsLeagueGroups={championsLeagueGroups} />
+                <div className='champion-league-content'>
+                    <DisplayChampionsLeague championsLeagueGroups={championsLeagueGroups} />
+                    <DisplayScorersStandings scorersStandings={scorersStandings} />
+                </div>
                 :
-                <DisplayOtherCompetitions teams={teams} />}
-        </div>
+                <div className='other-leagues-content'>
+                    <DisplayOtherCompetitions teams={teams} />
+                    <DisplayScorersStandings scorersStandings={scorersStandings} />
+                </div>
+            }
+
+        </>
     )
 }

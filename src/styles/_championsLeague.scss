@@ -1,8 +1,20 @@
 /******** Champions League Start *********/
 @import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
+
+.champion-league-content{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-column-gap: 100px;
+}
+
+
 .champions-league{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    // grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     column-gap: 10px;
 }
 .group-name{
@@ -81,3 +93,4 @@
         }
     }
 /******** Champions League Start *********/
+

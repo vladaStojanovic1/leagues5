@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment';
 import { TableResults } from './TableResults';
+import { ShowInfo } from './ShowInfo';
 
 
 
 export const MatchesResults = () => {
+
 
     /******* State *******/
     const [matches, setMatches] = useState([]);
@@ -14,6 +16,7 @@ export const MatchesResults = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [matchesPerPage] = useState(10);
     /******* State *******/
+
 
 
     useEffect(() => {
@@ -59,18 +62,22 @@ export const MatchesResults = () => {
     let matchesLength = matches.length;
     /*** Pagination ***/
 
+
+
     return (
         <div>
 
             {loading ? <h1 style={{ color: 'white' }}>Loading...</h1> :
-                <TableResults
-                    currentMatches={currentMatches}
-                    handleDate={handleDate}
-                    date={date}
-                    matchesPerPage={matchesPerPage}
-                    matchesLength={matchesLength}
-                    paginate={paginate}
-                />
+                <>
+                    <TableResults
+                        currentMatches={currentMatches}
+                        handleDate={handleDate}
+                        date={date}
+                        matchesPerPage={matchesPerPage}
+                        matchesLength={matchesLength}
+                        paginate={paginate}
+                    />
+                </>
             }
         </div>
     )

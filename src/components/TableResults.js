@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { Table } from 'react-bootstrap';
 import moment from 'moment';
 import spain from '../img/iconLeague/spain.png'
@@ -10,6 +11,7 @@ import netherlands from '../img/iconLeague/netherlands.png'
 import portugal from '../img/iconLeague/portugal.png'
 import { Calendar } from './Calendar';
 import { Pagination } from './Pagination';
+import { ShowInfo } from './ShowInfo';
 
 export const TableResults = ({
     currentMatches,
@@ -55,24 +57,27 @@ export const TableResults = ({
         }
     }
 
+
+
     return (
         <div className='table' >
             <h1 style={{ color: 'white' }}>Today Matches</h1>
 
+            {/* Calendar */}
             <Calendar handleDate={handleDate} date={date} />
 
+            {/* Table Start */}
             <Table striped hover className='table-component' >
                 <tbody>
                     {currentMatches.map((match, index) => {
+
                         return (
                             <tr key={index}>
-
                                 <td className='td-date' >
                                     {moment(match.utcDate).format('HH:mm')}<br />{match.country}
                                 </td>
 
                                 <td className='td-content'>
-
                                     <div className='flag-homeTeam' >
                                         <div className='icon-country'>
                                             {flags(match.competition.name)}
@@ -82,8 +87,8 @@ export const TableResults = ({
                                             <span>{match.homeTeam.name}</span>
                                         </div>
                                     </div>
-
                                     <div className='scores '>
+                                        {/* Animation for matches who going live*/}
                                         <div className={match.status === 'IN_PLAY' ? 'animated infinite flash slower' : null}>
                                             <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.homeTeam}</span> -&nbsp;
                                             <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.awayTeam}</span>
@@ -98,9 +103,7 @@ export const TableResults = ({
                                     </div>
                                     <div className='away-team-name'>
                                         <span>{match.awayTeam.name}</span>
-
                                     </div>
-
                                     {halfTimeStatus(match.status)}
                                 </td>
                             </tr>
@@ -108,7 +111,9 @@ export const TableResults = ({
                     })}
                 </tbody>
             </Table >
+            {/* Table End */}
 
+            {/* Pagination */}
             <Pagination
                 matchesLength={matchesLength}
                 matchesPerPage={matchesPerPage}

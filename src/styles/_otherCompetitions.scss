@@ -1,6 +1,13 @@
+.other-leagues-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    // grid-column-gap: 100px;
+}
 .td-other-competition{
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr 1fr;
+    grid-template-columns: 3fr 11fr 3fr 2fr;
     align-items: center;
     padding: 0 !important;
     line-height: 0.6;
@@ -12,8 +19,9 @@
     text-align: center;
     
     img{
-        width: 100%;
         margin-left: 10px;
+        width: 30px;
+        height: 30px;
     }
 }
 .positionNum{
@@ -39,7 +47,10 @@
     grid-column: 3/5;
     font-family: $sarabun-font;
 
-   
+    p{
+        margin-bottom: 0;
+        color: $my-silver;
+    }
     p:nth-child(2){
         margin-bottom: 0;
         font-weight: 600;
@@ -49,11 +60,15 @@
         color: $my-black;
         font-family: $sarabun-font;
     }
-    p{
-        margin-bottom: 0;
-        color: $my-silver;
+    p:nth-child(1){
+        background: linear-gradient(45deg, #ffe3a5, transparent);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.4;
+        font-weight: bold;
     }
-  
 }
 .team-name{
     margin-left: 23px;
@@ -63,4 +78,11 @@
         font-family: $sarabun-font;
         color: $my-silver;
     }
+}
+.other-teams{
+    grid-column: 1/3;
+}
+
+.scorers-standings{
+    grid-column: 4/7;
 }
