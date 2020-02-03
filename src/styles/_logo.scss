@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Barrio&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
 .logo-div{
-    display: flex;
+    // display: flex;
+    display: grid;
+    text-align: center;
     align-items: center;
     margin-bottom: 70px;
+    p{
+        color:$my-white;
+        // font-family: 'Shadows Into Light', cursive;
+        font-family: 'Kalam', cursive;
+
+ 
+    }
     h1{
         color: white;
         font-family: 'Barrio', cursive;
@@ -22,5 +32,13 @@
         margin: auto;
         display: flex;
         align-items: center;
+    }
+}
+.logo-link{
+    text-decoration: none;
+    list-style:none;
+    
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
     }
 }

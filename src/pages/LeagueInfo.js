@@ -5,7 +5,7 @@ import { DisplayLeagueInfo } from '../components/DisplayLeagueInfo'
 import { DisplayChampionsLeague } from '../components/DisplayChampionsLeague';
 import { DisplayOtherCompetitions } from '../components/DisplayOtherCompetitions';
 import { DisplayScorersStandings } from '../components/DisplayScorersStandings';
-import { HashLoader } from "react-spinners";
+import { LoaderBounce } from '../components/loaderBounce/LoaderBounce';
 
 
 export const LeagueInfo = ({ match }) => {
@@ -65,29 +65,28 @@ export const LeagueInfo = ({ match }) => {
 
 
     return (
-        <div style={{ margin: 'auto' }}>
-
+        <>
             {/* Because is a diffrent data from API*/}
             {match.params.id === '2001' ?
                 <div className='champion-league-content'>
-                    {loading ? <HashLoader size={300} color={"#33c24a"} /> :
-                        <>
+                    {loading ? <LoaderBounce /> :
+                        <div className='champion-league-divs'>
                             <DisplayChampionsLeague championsLeagueGroups={championsLeagueGroups} />
                             <DisplayScorersStandings scorersStandings={scorersStandings} />
-                        </>
+                        </div>
                     }
                 </div>
                 :
                 <div className='other-leagues-content'>
-                    {loading ? <HashLoader size={300} color={"#7cdc35"} /> :
-                        <>
+                    {loading ? <LoaderBounce /> :
+                        <div className='other-leagues-divs'>
                             <DisplayOtherCompetitions teams={teams} />
                             <DisplayScorersStandings scorersStandings={scorersStandings} />
-                        </>
+                        </div>
                     }
                 </div>
             }
-        </div>
+        </>
     )
 }
 

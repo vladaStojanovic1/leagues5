@@ -11,7 +11,6 @@ import netherlands from '../img/iconLeague/netherlands.png'
 import portugal from '../img/iconLeague/portugal.png'
 import { Calendar } from './Calendar';
 import { Pagination } from './Pagination';
-import { ShowInfo } from './ShowInfo';
 
 export const TableResults = ({
     currentMatches,
@@ -61,7 +60,7 @@ export const TableResults = ({
 
     return (
         <div className='table' >
-            <h1 style={{ color: 'white' }}>Today Matches</h1>
+            <h3 className='schedule-p'>Schedule & upcoming Matches</h3>
 
             {/* Calendar */}
             <Calendar handleDate={handleDate} date={date} />

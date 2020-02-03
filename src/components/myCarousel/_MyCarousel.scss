@@ -1,0 +1,85 @@
+
+
+.my-carousel{
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    h3{
+        color: $my-white;
+        font-family: $sarabun-font;
+        font-size: 30px;
+        text-align: start;
+        font-weight: 400;
+
+
+    }
+}
+
+.carousel-div{
+    background: linear-gradient(138deg, #d8d8d8, transparent);
+    opacity: 0.8;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.carousel-content{
+    display: grid;
+    grid-template-rows: 1.8fr 1fr;
+    align-items: center;
+}
+.carousel-image-spans{
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.carousel-season-image{
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    p{
+        font-family: $sarabun-font !important;
+        font-weight: bold;
+    }
+}
+      
+
+
+.carousel-won{
+    @include info-span(lightgreen);
+    color: black;
+
+}
+.carousel-draw{
+    @include info-span(rgb(218, 218, 47));
+    color: black;
+
+}
+.carousel-lost{
+    @include info-span(rgb(243, 75, 75));
+    color: black;
+}
+
+.custom-dot-list-style{
+    li{
+
+        bottom: -20px;
+    }
+}
+.react-multi-carousel-track  {
+    margin-bottom: 20px !important;
+}
+
+.w-d-l{
+    margin-top: 10px;
+}
+
+svg {
+    color: #33c24a;
+    font-size: 32px;
+    margin-left: 10px;
+}

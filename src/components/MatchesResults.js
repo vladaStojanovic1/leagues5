@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment';
 import { TableResults } from './TableResults';
-import { ShowInfo } from './ShowInfo';
-import { ClockLoader } from "react-spinners";
+import { LoaderClock } from './clockLoader/LoaderClock';
 
 
 export const MatchesResults = () => {
@@ -65,12 +64,9 @@ export const MatchesResults = () => {
 
 
     return (
-        <div style={{ margin: 'auto' }}>
+        <div style={{}}>
 
-            {loading ? <ClockLoader
-                size={150}
-                //size={"150px"} this also works
-                color={"#7cdc35"}
+            {loading ? <LoaderClock
             /> :
                 <>
                     <TableResults

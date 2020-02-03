@@ -13,6 +13,7 @@ export const LeaguesLinks = () => {
 
     return (
         <div className='leagues-links'>
+            <p className='descriptions-p'>Follow the top leagues (EPL, La Liga, Bundesliga, Serie A, Ligue 1, Eredivisie, MLS, A-League) and all international tournaments like Champions League, UEFA Europa league, live matches and statistic for every match <br /> only on <span className='span-leagues'>leagues</span><span className='span-5'>5</span></p>
 
             <div className="all-cards">
 
@@ -22,8 +23,6 @@ export const LeaguesLinks = () => {
                             <img src={laLiga} alt="" />
                         </div>
                         <div className="info">
-                            {/* <p>Spanis</p> */}
-                            {/* <h3>La Liga</h3> */}
                         </div>
                     </div>
                 </Link>
@@ -34,8 +33,6 @@ export const LeaguesLinks = () => {
                             <img src={premierLeague} alt="" />
                         </div>
                         <div className="info">
-                            {/* <p>England</p> */}
-                            {/* <h3>Premier League</h3> */}
                         </div>
                     </div>
                 </Link>
@@ -46,8 +43,6 @@ export const LeaguesLinks = () => {
                             <img src={serieA} alt="" />
                         </div>
                         <div className="info">
-                            {/* <p>Italy</p> */}
-                            {/* <h3>SERIE A</h3> */}
                         </div>
                     </div>
                 </Link>
@@ -58,8 +53,6 @@ export const LeaguesLinks = () => {
                             <img src={bundesLeague} alt="" />
                         </div>
                         <div className="info">
-                            {/* <p>Germany</p> */}
-                            {/* <h3>Bundesliga</h3> */}
                         </div>
                     </div>
                 </Link>
@@ -70,8 +63,6 @@ export const LeaguesLinks = () => {
                             <img src={franceLeague} alt="" />
                         </div>
                         <div className="info">
-                            {/* <p>France</p> */}
-                            {/* <h3>Ligue 1</h3> */}
                         </div>
                     </div>
                 </Link>
@@ -82,8 +73,6 @@ export const LeaguesLinks = () => {
                             <img src={championLeague} alt="" />
                         </div>
                         <div className="info">
-                            {/* <p>Europe</p> */}
-                            {/* <h3>Champion League</h3> */}
                         </div>
                     </div>
                 </Link>

@@ -1,0 +1,72 @@
+[
+    {
+        "leagueName": "La Liga",
+        "teamName": "Barcelona",
+        "teamImg": "/teamsIcon-myData/barselona.png",
+        "leagueImg": "/teamsIcon-myData/laliga.png",
+        "season": "2018-2019",
+        "won": "26W",
+        "draw": "9D",
+        "lost": "3L"
+    },
+    {
+        "leagueName": "Serie A",
+        "teamName": "Juventus",
+        "teamImg": "/teamsIcon-myData/juventus.png",
+        "leagueImg": "/teamsIcon-myData/seriea.png",
+        "season": "2018-2019",
+        "won": "28W",
+        "draw": "6D",
+        "lost": "4L"
+    },
+    {
+        "leagueName": "Bundes Liga",
+        "teamName": "Bayern Munich",
+        "teamImg": "/teamsIcon-myData/bayern.png",
+        "leagueImg": "/teamsIcon-myData/Bundesliga.png",
+        "season": "2018-2019",
+        "won": "24W",
+        "draw": "6D",
+        "lost": "4L"
+    },
+    {
+        "leagueName": "Liga 1",
+        "teamName": "Paris Saint-Germain",
+        "teamImg": "/teamsIcon-myData/psg.png",
+        "leagueImg": "/teamsIcon-myData/franceligue.png",
+        "season": "2018-2019",
+        "won": "29W",
+        "draw": "4D",
+        "lost": "5L"
+    },
+    {
+        "leagueName": "Premier League",
+        "teamName": "Manchester City",
+        "teamImg": "/teamsIcon-myData/mcity.png",
+        "leagueImg": "/teamsIcon-myData/premierleague.png",
+        "season": "2018-2019",
+        "won": "32W",
+        "draw": "2D",
+        "lost": "4L"
+    },
+    {
+        "leagueName": "Eredisie",
+        "teamName": "Ajax",
+        "teamImg": "/teamsIcon-myData/ajax.png",
+        "leagueImg": "/teamsIcon-myData/eredivisie2.png",
+        "season": "2018-2019",
+        "won": "28W",
+        "draw": "2D",
+        "lost": "4L"
+    },
+    {
+        "leagueName": "Primeira Liga",
+        "teamName": "Benfica",
+        "teamImg": "/teamsIcon-myData/benfica.png",
+        "leagueImg": "/teamsIcon-myData/primeira2.png",
+        "season": "2018-2019",
+        "won": "28W",
+        "draw": "3D",
+        "lost": "3L"
+    }
+]

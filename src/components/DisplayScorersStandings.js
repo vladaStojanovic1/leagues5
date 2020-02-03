@@ -1,7 +1,11 @@
 import React from 'react'
 import { Table } from 'react-bootstrap';
+import { IoIosFootball } from "react-icons/io";
+
 
 export const DisplayScorersStandings = ({ scorersStandings }) => {
+
+    console.log(scorersStandings);
 
 
     return (
@@ -18,8 +22,9 @@ export const DisplayScorersStandings = ({ scorersStandings }) => {
                                         <p className='scorer-name'>{scorer.name}</p>
                                         <p className='scorer-team'>{scorer.team}</p>
                                     </div>
-                                    <div>
+                                    <div style={{ display: 'flex' }}>
                                         <p className='goal-number'>{scorer.numberOfGoals}</p>
+                                        <IoIosFootball style={{ color: 'black', width: '20px' }} />
                                     </div>
                                     <div>
                                         <p className='soccer-country'>{scorer.country}</p>

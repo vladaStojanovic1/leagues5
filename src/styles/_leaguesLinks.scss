@@ -1,3 +1,6 @@
+
+
+
 .my-card{
     color: white;
     cursor: pointer;
@@ -5,25 +8,18 @@
     background: azure;
     opacity: 0.6;
     padding: 10px;
-    // position: relative;
     img{
         width: 100%
     }
     .info{
         text-align: center;
-        // position: relative;
-        // padding: 11px;
         p{
             color: black;
             margin-bottom: 0;
             text-transform: uppercase;
-            // position: absolute;
-            // left: 30px;
         
         }
     }
-
-   
 }
 
     .all-cards{
@@ -46,3 +42,18 @@
             color: whitesmoke;
         }
     }
+.descriptions-p{
+    color: $my-white;
+    margin-bottom: 30px;
+    font-family: $sarabun-font;
+}
+.span-5{
+    color: #33c24a;
+    font-weight: bold;
+}
+.span-leagues{
+    // font-weight: bold;
+    font-size: 17px;
+    color: white;
+    font-family: 'Barrio', cursive;
+}

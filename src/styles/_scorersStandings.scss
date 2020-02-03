@@ -10,7 +10,9 @@
     background-position: center;
     color: white;
     font-weight: bold;
-
+     svg{
+         display: none;
+     }
     .goal-number{
         background: rgb(255, 255, 255);
         width: 60px;
@@ -41,9 +43,10 @@
 
 .td-scorers{
     display: grid;
-    grid-template-columns: 10fr 2fr 2fr;
+    grid-template-columns: 10fr 2fr 4fr;
     align-items: center;
     padding: 5px 10px 5px 10px;
+    line-height: 1.1;
 }
 
 .goal-number{
@@ -77,4 +80,10 @@ p{
 .scorer-team{
     margin-bottom: 0;
     color: $my-silver
+}
+
+.ball-icon{
+    color: black;
+    width: 20px;
+
 }

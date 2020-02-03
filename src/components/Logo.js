@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 export const Logo = () => {
 
     return (
-        <Link to='/'>
+        <Link className='logo-link' to='/'>
             <div className='logo-div '>
                 <div className='logo-content'>
                     <img src={ball} alt="logo-ball" />
                     <h1>Leagues<span>5</span></h1>
                 </div>
+                <p>All football results in one place. Realtime.</p>
             </div>
         </Link>
     )

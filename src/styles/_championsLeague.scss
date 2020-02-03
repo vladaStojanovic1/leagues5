@@ -4,9 +4,10 @@
 .champion-league-content{
     width: 90%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-column-gap: 100px;
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    // grid-template-columns: 3fr 1fr;
+    // grid-column-gap: 50px;
 }
 
 
@@ -94,3 +95,14 @@
     }
 /******** Champions League Start *********/
 
+.champion-league-divs{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    // grid-template-columns: 3fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-column-gap: 100px;
+}
+.css-t2rmvs{
+    text-align: center;
+}
