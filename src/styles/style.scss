@@ -7,7 +7,7 @@
 .App{
     background-image: url('../img/cover1.jpg');
     background-size: cover;
-    height: 150vh;
+    height: 130vh;
     width: 100%;
     background-position: center;
 }
@@ -23,3 +23,4 @@
 @import './otherCompetitions';
 @import './scorersStandings';
 @import '../components/myCarousel/MyCarousel';
+@import '../components/bestPlayers/bestPlayers';

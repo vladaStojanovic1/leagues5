@@ -14,6 +14,7 @@ export const Container = () => {
                 <MatchesResults />
             </div>
             <MyCarousel />
+            <BestPlayers />
         </div>
     )
 }

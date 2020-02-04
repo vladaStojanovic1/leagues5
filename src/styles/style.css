@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css?family=Concert+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Jua&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +19,7 @@
 .App {
   background-image: url("../img/cover1.jpg");
   background-size: cover;
-  height: 150vh;
+  height: 130vh;
   width: 100%;
   background-position: center;
 }
@@ -706,5 +707,98 @@ svg {
   color: #33c24a;
   font-size: 32px;
   margin-left: 10px;
+}
+
+.best-players-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ronaldo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.ronaldo img {
+  width: 350px;
+  -webkit-filter: drop-shadow(5px 9px 10px #222);
+          filter: drop-shadow(5px 9px 10px #222);
+}
+
+.messi {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.messi img {
+  width: 350px;
+  -webkit-filter: drop-shadow(5px 9px 10px #222);
+          filter: drop-shadow(5px 9px 10px #222);
+}
+
+.golden-ball {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 9px;
+}
+
+.golden-ball P {
+  margin-bottom: 0;
+  border-bottom: 1px solid black;
+}
+
+.golden-ball span {
+  font-size: 22px;
+}
+
+.messi-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 9px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.messi-info P {
+  margin-bottom: 0;
+  border-bottom: 1px solid black;
+}
+
+.messi-info span {
+  font-size: 22px;
+}
+
+.text-players {
+  text-align: center;
+  font-size: 23px;
+  color: #5a5a5a;
+  font-family: 'Kalam', cursive;
+}
+
+.text-players span {
+  font-weight: bold;
+  font-family: "Sarabun", sans-serif;
+  color: #3f3e3e;
 }
 /*# sourceMappingURL=style.css.map */
