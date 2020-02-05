@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+
+html,body{
+    height: 100%;
+}
+
 .App{
     background-image: url('../img/cover1.jpg');
     background-size: cover;
-    height: 130vh;
+    height: 140vh;
     width: 100%;
     background-position: center;
+    min-height: 100vh;
 }
 
 @import './variables';
@@ -24,3 +30,4 @@
 @import './scorersStandings';
 @import '../components/myCarousel/MyCarousel';
 @import '../components/bestPlayers/bestPlayers';
+@import '../components/footer/footer';

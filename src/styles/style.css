@@ -16,12 +16,17 @@
           box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 .App {
   background-image: url("../img/cover1.jpg");
   background-size: cover;
-  height: 130vh;
+  height: 140vh;
   width: 100%;
   background-position: center;
+  min-height: 100vh;
 }
 
 .logo-div {
@@ -243,6 +248,7 @@
 .champion-league-content {
   width: 90%;
   margin: auto;
+  min-height: 120vh;
 }
 
 .champions-league {
@@ -385,6 +391,7 @@
 .other-leagues-content {
   width: 80%;
   margin: auto;
+  min-height: 116vh;
 }
 
 .td-other-competition {
@@ -800,5 +807,133 @@ svg {
   font-weight: bold;
   font-family: "Sarabun", sans-serif;
   color: #3f3e3e;
+}
+
+.footer-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-family: "Sarabun", sans-serif;
+}
+
+.footer {
+  background: #270c39;
+  padding: 70px;
+}
+
+.logo-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-footer h1 {
+  color: white;
+  font-family: 'Barrio', cursive;
+  font-size: 30px;
+}
+
+.logo-footer span {
+  color: #33c24a;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 43px;
+}
+
+.logo-footer img {
+  width: 40px;
+}
+
+.links-footer {
+  display: -ms-grid;
+  display: grid;
+}
+
+.links-footer .link-footer:focus, .links-footer .link-footer:hover, .links-footer .link-footer:visited, .links-footer .link-footer:link, .links-footer .link-footer:active {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.adress-footer {
+  display: -ms-grid;
+  display: grid;
+}
+
+.adress-footer span {
+  color: white;
+}
+
+.adress-footer p {
+  color: white;
+}
+
+.icon-footer {
+  margin-left: 0;
+}
+
+.input-footer {
+  display: -ms-grid;
+  display: grid;
+  color: white;
+}
+
+.input-footer button {
+  font-family: "Sarabun", sans-serif;
+  width: 110px;
+  color: white;
+  border-radius: 11px;
+  background: transparent;
+  border: 1px solid white;
+}
+
+.input-footer button:hover {
+  background: #33c24a;
+  font-weight: bold;
+}
+
+.input-footer input {
+  width: 260px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #11998e, #38ef7d);
+     border-image: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
+     border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+.icon-two {
+  margin: 17px;
 }
 /*# sourceMappingURL=style.css.map */

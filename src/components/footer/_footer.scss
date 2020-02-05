@@ -1,0 +1,110 @@
+
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family: $sarabun-font;
+}
+
+.footer{
+    background: #270c39;
+    padding: 70px;
+}
+.logo-footer{
+    display: flex;
+    align-items: center;
+
+    h1{
+        color: white;
+        font-family: 'Barrio', cursive;
+        font-size: 30px;
+    }
+    span{
+        color: #33c24a;
+        font-family: 'Gloria Hallelujah', cursive;
+        font-size: 43px;
+    }
+    img{
+        width: 40px;
+    }
+}
+.links-footer{
+    display: grid;
+
+    .link-footer{
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+    }
+}
+.adress-footer{
+    display: grid;
+    span{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+}
+.icon-footer{
+    margin-left: 0;
+}
+.input-footer{
+    display: grid;
+    color: white;
+    button{
+        font-family: $sarabun-font;
+        width: 110px;
+        color: white;
+        border-radius: 11px;
+        background: transparent;
+        border: 1px solid white;
+        &:hover{
+            background: #33c24a;
+            font-weight: bold;
+        }
+    }
+    input{
+        width: 260px;
+    }
+}
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+ 
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+
+.icon-two{
+    margin: 17px;
+}

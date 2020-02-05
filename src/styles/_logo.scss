@@ -4,17 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
 .logo-div{
-    // display: flex;
     display: grid;
     text-align: center;
     align-items: center;
     margin-bottom: 70px;
     p{
         color:$my-white;
-        // font-family: 'Shadows Into Light', cursive;
         font-family: 'Kalam', cursive;
-
- 
     }
     h1{
         color: white;
