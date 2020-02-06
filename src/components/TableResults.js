@@ -57,19 +57,20 @@ export const TableResults = ({
     }
 
 
-
     return (
         <div className='table' >
+
             <h3 className='schedule-p'>Schedule & upcoming Matches</h3>
 
             {/* Calendar */}
             <Calendar handleDate={handleDate} date={date} />
 
+            {matchesLength <= 0 ? <h2>Nema meceva danas</h2> : null}
             {/* Table Start */}
             <Table striped hover className='table-component' >
                 <tbody>
                     {currentMatches.map((match, index) => {
-
+                        console.log(currentMatches)
                         return (
                             <tr key={index}>
                                 <td className='td-date' >

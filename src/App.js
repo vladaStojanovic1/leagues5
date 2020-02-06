@@ -16,8 +16,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div className='app-test'> */}
-
       <Logo />
 
       <Switch>
@@ -25,9 +23,7 @@ function App() {
         <Route path='/:league/:id' component={LeagueInfo} />
       </Switch>
 
-      {/* </div> */}
       <Footer />
-
     </div>
   );
 }

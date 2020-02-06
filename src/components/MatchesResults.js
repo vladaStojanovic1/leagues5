@@ -45,6 +45,7 @@ export const MatchesResults = () => {
         }
     }, [date])
 
+    console.log(matches);
 
     /*** Date Picker ***/
     const handleDate = (e) => {
@@ -61,10 +62,10 @@ export const MatchesResults = () => {
     let matchesLength = matches.length;
     /*** Pagination ***/
 
-
+    console.log(matchesLength)
 
     return (
-        <div style={{}}>
+        <div >
 
             {loading ? <LoaderClock
             /> :

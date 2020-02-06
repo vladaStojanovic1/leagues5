@@ -1,8 +1,14 @@
 
 .footer-content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     font-family: $sarabun-font;
+    grid-row-gap: 60px;
+    font-family: $sarabun-font;
+
+    p{
+        color: $my-white !important;
+    }
 }
 
 .footer{
@@ -12,11 +18,13 @@
 .logo-footer{
     display: flex;
     align-items: center;
+    justify-content: center;
 
     h1{
         color: white;
         font-family: 'Barrio', cursive;
         font-size: 30px;
+
     }
     span{
         color: #33c24a;
@@ -29,8 +37,12 @@
 }
 .links-footer{
     display: grid;
+    margin: 0 auto;
 
     .link-footer{
+        color: $my-white !important;
+        font-weight: bold;
+
         &:focus, &:hover, &:visited, &:link, &:active {
             text-decoration: none;
             color: whitesmoke;
@@ -39,11 +51,15 @@
 }
 .adress-footer{
     display: grid;
+    margin: 0 auto;
     span{
-        color: white;
+        color:$my-white;
+        font-weight: bold;
     }
     p{
-        color: white;
+        color: whitesmoke !important;
+        font-weight: bold;
+        font-size: 18px;
     }
 }
 .icon-footer{
@@ -51,14 +67,21 @@
 }
 .input-footer{
     display: grid;
-    color: white;
+    margin: 0 auto;
+    p{
+        color: white !important;
+        font-weight: bold;
+        font-size: 18px;
+    }
     button{
         font-family: $sarabun-font;
         width: 110px;
-        color: white;
+        height: 30px;
+        color: $my-white;
         border-radius: 11px;
         background: transparent;
         border: 1px solid white;
+        font-weight: bold;
         &:hover{
             background: #33c24a;
             font-weight: bold;
@@ -66,6 +89,11 @@
     }
     input{
         width: 260px;
+    }
+}
+.link-football-data{
+    &:hover{
+        text-decoration: none;
     }
 }
 
@@ -107,4 +135,16 @@ $gray: #9b9b9b;
 
 .icon-two{
     margin: 17px;
+}
+.football-data{
+    font-weight: bold;
+    font-size: 20px;
+    color: darkkhaki;
+}
+
+.footer-section-one{
+    text-align: center;
+    p{
+        font-weight: bold;
+    }
 }

@@ -14,7 +14,7 @@ import { TiArrowDownOutline } from 'react-icons/ti';
 
 export const BestPlayers = () => {
     return (
-        <div style={{ marginTop: '200px' }}>
+        <div style={{ marginTop: '200px', background: 'white' }}>
             <p className='text-players'>In football conversations usually arises the discussion over who is better… if <span>Leo Messi</span> or <span>Cristiano Ronaldo</span>.</p>
             <p className='text-players'>Let's analyze the global figures that both players have produced throughout their career.</p>
             <p className='text-players'><TiArrowDownOutline color={'black'} /><TiArrowDownOutline color={'black'} /></p>

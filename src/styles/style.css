@@ -23,10 +23,10 @@ html, body {
 .App {
   background-image: url("../img/cover1.jpg");
   background-size: cover;
-  height: 140vh;
+  height: 100%;
   width: 100%;
   background-position: center;
-  min-height: 100vh;
+  background-attachment: fixed;
 }
 
 .logo-div {
@@ -722,8 +722,6 @@ svg {
   -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   text-align: center;
-  width: 90%;
-  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -812,9 +810,15 @@ svg {
 .footer-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   font-family: "Sarabun", sans-serif;
+  grid-row-gap: 60px;
+  font-family: "Sarabun", sans-serif;
+}
+
+.footer-content p {
+  color: #dbdbdb !important;
 }
 
 .footer {
@@ -829,6 +833,9 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .logo-footer h1 {
@@ -850,6 +857,12 @@ svg {
 .links-footer {
   display: -ms-grid;
   display: grid;
+  margin: 0 auto;
+}
+
+.links-footer .link-footer {
+  color: #dbdbdb !important;
+  font-weight: bold;
 }
 
 .links-footer .link-footer:focus, .links-footer .link-footer:hover, .links-footer .link-footer:visited, .links-footer .link-footer:link, .links-footer .link-footer:active {
@@ -860,14 +873,18 @@ svg {
 .adress-footer {
   display: -ms-grid;
   display: grid;
+  margin: 0 auto;
 }
 
 .adress-footer span {
-  color: white;
+  color: #dbdbdb;
+  font-weight: bold;
 }
 
 .adress-footer p {
-  color: white;
+  color: whitesmoke !important;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .icon-footer {
@@ -877,16 +894,24 @@ svg {
 .input-footer {
   display: -ms-grid;
   display: grid;
-  color: white;
+  margin: 0 auto;
+}
+
+.input-footer p {
+  color: white !important;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .input-footer button {
   font-family: "Sarabun", sans-serif;
   width: 110px;
-  color: white;
+  height: 30px;
+  color: #dbdbdb;
   border-radius: 11px;
   background: transparent;
   border: 1px solid white;
+  font-weight: bold;
 }
 
 .input-footer button:hover {
@@ -896,6 +921,10 @@ svg {
 
 .input-footer input {
   width: 260px;
+}
+
+.link-football-data:hover {
+  text-decoration: none;
 }
 
 .form__field {
@@ -935,5 +964,19 @@ svg {
 
 .icon-two {
   margin: 17px;
+}
+
+.football-data {
+  font-weight: bold;
+  font-size: 20px;
+  color: darkkhaki;
+}
+
+.footer-section-one {
+  text-align: center;
+}
+
+.footer-section-one p {
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

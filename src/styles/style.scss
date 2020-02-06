@@ -12,10 +12,10 @@ html,body{
 .App{
     background-image: url('../img/cover1.jpg');
     background-size: cover;
-    height: 140vh;
+    height: 100%;
     width: 100%;
     background-position: center;
-    min-height: 100vh;
+    background-attachment: fixed;
 }
 
 @import './variables';

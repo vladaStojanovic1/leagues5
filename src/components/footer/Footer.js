@@ -14,45 +14,45 @@ export const Footer = () => {
 
         <div className='footer'>
             <div className="footer-content">
-                <div>
+                <div className='footer-section-one'>
                     <div className='logo-footer'>
                         <img src={ball} alt="logo-ball" />
                         <h1>Leagues<span>5</span></h1>
                     </div>
                     <div>
-                        <Link>
+                        <Link to='#'>
                             <FiFacebook className='icon-footer' />
                         </Link>
-                        <Link>
+                        <Link to='#'>
                             <FaInstagram className='icon-footer icon-two' />
                         </Link>
-                        <Link>
+                        <Link to='#'>
                             <FiTwitter className='icon-footer' />
                         </Link>
                     </div>
                     <div>
-                        <p style={{ color: 'white' }}>A big thanks for Daniel & <spna>football-data.org</spna><br /> for making it API free.</p>
+                        <p style={{ color: 'white' }}>A big thanks for Daniel & <a className='link-football-data' rel="noopener noreferrer" target='_blank' href='https://www.football-data.org/'><span className='football-data'>football-data.org</span></a><br /> for making it API free.</p>
                     </div>
                 </div>
 
                 <div className='links-footer'>
-                    <Link className='link-footer'>About</Link>
-                    <Link className='link-footer'>Teams</Link>
-                    <Link className='link-footer'>Owner Profile</Link>
-                    <Link className='link-footer'>Services</Link>
-                    <Link className='link-footer'>Contact Us</Link>
+                    <Link to='#' className='link-footer'>About</Link>
+                    <Link to='#' className='link-footer'>Teams</Link>
+                    <Link to='#' className='link-footer'>Owner Profile</Link>
+                    <Link to='#' className='link-footer'>Services</Link>
+                    <Link to='#' className='link-footer'>Contact Us</Link>
                 </div>
 
                 <div className='adress-footer'>
-                    <p>Contact Us</p>
+                    <p>Contact Us &dArr;</p>
                     <span><FiMail className='icon-footer' /> ddsd@sds.com</span>
                     <span><FiPhoneCall className='icon-footer' /> 09984 94940 </span>
                     <span><FiNavigation2 className='icon-footer' /> ddsd@sds.com</span>
                 </div>
 
                 <div className='input-footer'>
-                    <p>Sing up for updates</p>
-                    <div class="form__group field">
+                    <p>Sing up for updates &dArr;</p>
+                    <div className="form__group field">
                         <input className='form__field' type="text" placeholder='Email*' />
                     </div>
                     <button>Subscribe</button>
