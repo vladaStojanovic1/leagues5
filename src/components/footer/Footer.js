@@ -45,9 +45,9 @@ export const Footer = () => {
 
                 <div className='adress-footer'>
                     <p>Contact Us &dArr;</p>
-                    <span><FiMail className='icon-footer' /> ddsd@sds.com</span>
-                    <span><FiPhoneCall className='icon-footer' /> 09984 94940 </span>
-                    <span><FiNavigation2 className='icon-footer' /> ddsd@sds.com</span>
+                    <span><FiMail className='icon-footer' />&nbsp; &nbsp; 1vladastojanovic1@gmail.com</span>
+                    <span><FiPhoneCall className='icon-footer' />&nbsp; &nbsp; 09984 94940 </span>
+                    <span><FiNavigation2 className='icon-footer' />&nbsp; &nbsp; ddsd@sds.com</span>
                 </div>
 
                 <div className='input-footer'>
@@ -57,6 +57,10 @@ export const Footer = () => {
                     </div>
                     <button>Subscribe</button>
                 </div>
+            </div>
+
+            <div className='footer-end'>
+                <p>&rArr; Copyright &copy; 2020 | vlada1</p>
             </div>
         </div>
     )

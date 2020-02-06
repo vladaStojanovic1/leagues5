@@ -5,6 +5,7 @@
     font-family: $sarabun-font;
     grid-row-gap: 60px;
     font-family: $sarabun-font;
+    padding: 70px;
 
     p{
         color: $my-white !important;
@@ -13,7 +14,6 @@
 
 .footer{
     background: #270c39;
-    padding: 70px;
 }
 .logo-footer{
     display: flex;
@@ -94,6 +94,16 @@
 .link-football-data{
     &:hover{
         text-decoration: none;
+    }
+}
+
+.footer-end{
+    background: #3c1b52de;
+    padding: 10px;
+    p{
+        margin-bottom: 0;
+        text-align: center;
+        color: $my-white;
     }
 }
 

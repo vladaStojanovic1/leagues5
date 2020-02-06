@@ -10,14 +10,18 @@ import italy from '../../img/serie a 1.png'
 import europe from '../../img/europe.png'
 import uefa from '../../img/uefa-best.png'
 import { TiArrowDownOutline } from 'react-icons/ti';
+import statistic from '../../img/players.png'
 
 
 export const BestPlayers = () => {
     return (
-        <div style={{ marginTop: '200px', background: 'white' }}>
+        <div className='best-players'>
             <p className='text-players'>In football conversations usually arises the discussion over who is better… if <span>Leo Messi</span> or <span>Cristiano Ronaldo</span>.</p>
             <p className='text-players'>Let's analyze the global figures that both players have produced throughout their career.</p>
-            <p className='text-players'><TiArrowDownOutline color={'black'} /><TiArrowDownOutline color={'black'} /></p>
+
+            <div style={{ textAlign: 'center' }}>
+                <img src={statistic} style={{ width: '300px' }} alt="" />
+            </div>
             <div className='best-players-content'>
                 <div className='ronaldo'>
                     <div>

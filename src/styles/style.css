@@ -623,20 +623,23 @@ p {
 .my-carousel {
   width: 60%;
   margin: auto;
-  margin-top: 100px;
   text-align: center;
+  margin-top: 50px;
 }
 
 .my-carousel h3 {
-  color: #dbdbdb;
   font-family: "Sarabun", sans-serif;
   font-size: 30px;
   text-align: start;
   font-weight: 400;
+  background: linear-gradient(45deg, white, transparent);
+  color: black !important;
+  padding-left: 15px;
+  border-radius: 10px;
 }
 
 .carousel-div {
-  background: linear-gradient(138deg, #d8d8d8, transparent);
+  background: aliceblue;
   opacity: 0.8;
   border-radius: 20px;
   margin: 10px;
@@ -686,6 +689,7 @@ p {
   font-size: 12px;
   font-weight: bold;
   color: black;
+  margin: 7px;
 }
 
 .carousel-lost {
@@ -714,6 +718,12 @@ svg {
   color: #33c24a;
   font-size: 32px;
   margin-left: 10px;
+}
+
+.best-players {
+  background: whitesmoke;
+  margin-top: 100px;
+  padding: 60px 0 80px 0;
 }
 
 .best-players-content {
@@ -799,6 +809,7 @@ svg {
   font-size: 23px;
   color: #5a5a5a;
   font-family: 'Kalam', cursive;
+  margin-bottom: 0;
 }
 
 .text-players span {
@@ -815,6 +826,7 @@ svg {
   font-family: "Sarabun", sans-serif;
   grid-row-gap: 60px;
   font-family: "Sarabun", sans-serif;
+  padding: 70px;
 }
 
 .footer-content p {
@@ -823,7 +835,6 @@ svg {
 
 .footer {
   background: #270c39;
-  padding: 70px;
 }
 
 .logo-footer {
@@ -925,6 +936,17 @@ svg {
 
 .link-football-data:hover {
   text-decoration: none;
+}
+
+.footer-end {
+  background: #3c1b52de;
+  padding: 10px;
+}
+
+.footer-end p {
+  margin-bottom: 0;
+  text-align: center;
+  color: #dbdbdb;
 }
 
 .form__field {

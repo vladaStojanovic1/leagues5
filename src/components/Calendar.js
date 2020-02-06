@@ -1,5 +1,6 @@
 import React from 'react'
 import DatePicker from 'react-date-picker';
+import { IoIosFootball } from 'react-icons/io';
 
 
 export const Calendar = ({ handleDate, date }) => {
@@ -10,7 +11,8 @@ export const Calendar = ({ handleDate, date }) => {
                 onChange={handleDate}
                 value={date}
                 clearIcon={null}
-                className='calendar' />
+                className='calendar'
+            />
         </div>
     )
 }

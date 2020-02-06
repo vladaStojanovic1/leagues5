@@ -22,7 +22,7 @@ export const DisplayScorersStandings = ({ scorersStandings }) => {
                                         <p className='scorer-name'>{scorer.name}</p>
                                         <p className='scorer-team'>{scorer.team}</p>
                                     </div>
-                                    <div style={{ display: 'flex' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
                                         <p className='goal-number'>{scorer.numberOfGoals}</p>
                                         <IoIosFootball style={{ color: 'black', width: '20px' }} />
                                     </div>

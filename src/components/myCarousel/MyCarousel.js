@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import myData from '../../data/data.json';
-import { FaArrowDown } from 'react-icons/fa';
+import { IoIosArrowDropdown } from 'react-icons/io';
 
 
 
@@ -32,9 +32,9 @@ export const MyCarousel = () => {
         <div className='my-carousel'>
 
             <div style={{ display: 'flex', alignItems: 'center' }}>
-                <h3 >Check out champions from last season in TOP leauges</h3>
+                <h3>Check out champions from last season in TOP leauges</h3>
                 {/* <img src={ball} alt="" style={{ width: '185px' }} /> */}
-                <FaArrowDown />
+                <IoIosArrowDropdown color={'black'} />
 
             </div>
             <Carousel
@@ -44,7 +44,7 @@ export const MyCarousel = () => {
                 showDots={true}
                 responsive={responsive}
                 infinite={true}
-                autoPlay={true}
+                // autoPlay={true}  
                 autoPlaySpeed={3000}
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
