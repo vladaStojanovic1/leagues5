@@ -4,28 +4,18 @@
 .champion-league-content{
     width: 90%;
     margin: auto;
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    // grid-template-columns: 3fr 1fr;
-    // grid-column-gap: 50px;
-    // min-height: 100%;
     min-height: 120vh;
 }
-
-
 .champions-league{
     display: grid;
-    // grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-    // grid-template-columns: 1fr 1fr;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     column-gap: 10px;
 }
 .group-name{
-    color: silver;
-    // font-family: $sarabun-font;
+    color: $my-white;
     text-align: center;
     font-family: 'Concert One', cursive;
-
+    text-decoration: underline;
 }
 .table{
     margin-bottom: 0 !important;
@@ -57,7 +47,6 @@
         margin-left: 10px;
         font-family: $sarabun-font;
         
-        
         p{
             margin-bottom: 0 !important;
             color: $my-silver;
@@ -65,13 +54,16 @@
         }
         .cl-won{
             @include info-span(#4caf50ad);
+            color: black;
         }
         .cl-draw{
             @include info-span(rgb(241, 212, 78));
             margin: 5px;
+            color: black;
         }
         .cl-lost{
             @include info-span(lightsalmon);
+            color: black;
         }
     }
 .spans{
@@ -101,10 +93,35 @@
     width: 90%;
     margin: auto;
     display: grid;
-    // grid-template-columns: 3fr 1fr;
     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     grid-column-gap: 100px;
 }
 .css-t2rmvs{
     text-align: center;
+}
+
+.championsLeague-icon{
+    display: grid;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+    p{
+        color: $my-white;
+        margin-bottom: 0;
+        font-size: 31px;
+    }
+    img{
+        margin: auto;
+        filter: drop-shadow(1px 1px 5px white);
+        margin-bottom: 13px;
+    }
+    span{
+        font-family: 'Patrick Hand', cursive;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: $my-white;
+        border: 1px solid white;
+        padding: 0 5px 0 5px;
+        font-size: 31px;
+    }
 }

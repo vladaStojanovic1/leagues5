@@ -44,9 +44,9 @@ export const MyCarousel = () => {
                 showDots={true}
                 responsive={responsive}
                 infinite={true}
-                // autoPlay={true}  
+                autoPlay={true}
                 autoPlaySpeed={3000}
-                removeArrowOnDeviceType={["tablet", "mobile"]}
+                // removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
             >

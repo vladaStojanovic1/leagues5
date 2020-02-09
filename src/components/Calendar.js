@@ -1,7 +1,7 @@
 import React from 'react'
 import DatePicker from 'react-date-picker';
-import { IoIosFootball } from 'react-icons/io';
-
+import { GoCalendar } from 'react-icons/go';
+import calendar from '../img/calendar.png'
 
 export const Calendar = ({ handleDate, date }) => {
 
@@ -12,6 +12,7 @@ export const Calendar = ({ handleDate, date }) => {
                 value={date}
                 clearIcon={null}
                 className='calendar'
+                calendarIcon={<img src={calendar} alt='sa' style={{ width: '30px' }} />}
             />
         </div>
     )

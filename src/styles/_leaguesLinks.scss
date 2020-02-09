@@ -1,12 +1,10 @@
 
-
-
 .my-card{
     color: white;
     cursor: pointer;
     text-align: center;
     background: azure;
-    opacity: 0.6;
+    // opacity: 0.6;
     padding: 10px;
     img{
         width: 100%
@@ -57,3 +55,21 @@
     color: white;
     font-family: 'Barrio', cursive;
 }
+
+
+// Effect on hover
+.league-link {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .league-link:hover, .league-link:focus, .league-link:active {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }

@@ -47,7 +47,7 @@ export const Footer = () => {
                     <p>Contact Us &dArr;</p>
                     <span><FiMail className='icon-footer' />&nbsp; &nbsp; 1vladastojanovic1@gmail.com</span>
                     <span><FiPhoneCall className='icon-footer' />&nbsp; &nbsp; 09984 94940 </span>
-                    <span><FiNavigation2 className='icon-footer' />&nbsp; &nbsp; ddsd@sds.com</span>
+                    <span><FiNavigation2 className='icon-footer' />&nbsp; &nbsp; 22 Street, Serbia</span>
                 </div>
 
                 <div className='input-footer'>
@@ -60,7 +60,7 @@ export const Footer = () => {
             </div>
 
             <div className='footer-end'>
-                <p>&rArr; Copyright &copy; 2020 | vlada1</p>
+                <p>&rArr; Copyright &copy; 2020 | <span style={{ fontWeight: 'bold' }}>vlada1</span> </p>
             </div>
         </div>
     )

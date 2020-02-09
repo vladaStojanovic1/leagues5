@@ -2,15 +2,14 @@ import React from 'react'
 import { Table } from 'react-bootstrap';
 import { IoIosFootball } from "react-icons/io";
 
-
-export const DisplayScorersStandings = ({ scorersStandings }) => {
-
-    console.log(scorersStandings);
-
+export const DisplayScorersStandings = ({ scorersStandings, competitionName }) => {
 
     return (
         <div className='scorers-standings'>
-
+            <div className='scorers-icon'>
+                {/* <img src={goal} alt="" style={{ width: '100px' }} /> */}
+                <p><span className='competitionName'>{competitionName}</span><span>TOP Scorers</span> </p>
+            </div>
             <Table striped hover>
                 <tbody style={{ background: 'azure' }}>
                     {scorersStandings.map((scorer, index) => {
@@ -22,7 +21,7 @@ export const DisplayScorersStandings = ({ scorersStandings }) => {
                                         <p className='scorer-name'>{scorer.name}</p>
                                         <p className='scorer-team'>{scorer.team}</p>
                                     </div>
-                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
                                         <p className='goal-number'>{scorer.numberOfGoals}</p>
                                         <IoIosFootball style={{ color: 'black', width: '20px' }} />
                                     </div>

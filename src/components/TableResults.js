@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React from 'react'
 import { Table } from 'react-bootstrap';
 import moment from 'moment';
 import spain from '../img/iconLeague/spain.png'
@@ -11,6 +10,8 @@ import netherlands from '../img/iconLeague/netherlands.png'
 import portugal from '../img/iconLeague/portugal.png'
 import { Calendar } from './Calendar';
 import { Pagination } from './Pagination';
+import { FaRegFrown } from 'react-icons/fa';
+
 
 export const TableResults = ({
     currentMatches,
@@ -39,7 +40,7 @@ export const TableResults = ({
                 return <img className='png-icon-results' src={netherlands} alt='icon-flag' />
             case 'Primeira Liga':
                 return <img className='png-icon-results' src={portugal} alt='icon-flag' />
-            default: console.log('Error');
+            default: console.log('Default');
         }
     }
 
@@ -60,17 +61,21 @@ export const TableResults = ({
     return (
         <div className='table' >
 
-            <h3 className='schedule-p'>Schedule & upcoming Matches</h3>
-
             {/* Calendar */}
-            <Calendar handleDate={handleDate} date={date} />
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <h3 className='schedule-p'>Schedule & upcoming Matches</h3>
+                <div>
+                    <Calendar handleDate={handleDate} date={date} />
+                </div>
+            </div>
 
-            {matchesLength <= 0 ? <h2>Nema meceva danas</h2> : null}
+            {matchesLength <= 0 ? <div style={{ textAlign: 'center' }}><p className='no-matches'>Today not has matches, please select another day...</p></div> : null}
+
             {/* Table Start */}
             <Table striped hover className='table-component' >
                 <tbody>
                     {currentMatches.map((match, index) => {
-                        console.log(currentMatches)
+
                         return (
                             <tr key={index}>
                                 <td className='td-date' >

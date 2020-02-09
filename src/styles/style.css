@@ -6,6 +6,7 @@
 @import url("https://fonts.googleapis.com/css?family=Sarabun&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sarabun&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Jua&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
@@ -81,7 +82,6 @@ html, body {
   cursor: pointer;
   text-align: center;
   background: azure;
-  opacity: 0.6;
   padding: 10px;
 }
 
@@ -134,6 +134,27 @@ html, body {
   font-size: 17px;
   color: white;
   font-family: 'Barrio', cursive;
+}
+
+.league-link {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.league-link:hover, .league-link:focus, .league-link:active {
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
 }
 
 .table {
@@ -229,6 +250,12 @@ html, body {
   font-family: "Sarabun", sans-serif;
 }
 
+.no-matches {
+  color: white;
+  background: linear-gradient(45deg, #9e3640, transparent);
+  border-radius: 12px;
+}
+
 .container-content {
   display: -ms-grid;
   display: grid;
@@ -240,8 +267,18 @@ html, body {
 }
 
 .calendar {
-  background: azure;
   font-family: 'Sarabun', sans-serif;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.calendar input, .calendar rect, .calendar span, .calendar svg {
+  color: white !important;
+  font-weight: bold;
+}
+
+.calendar .react-date-picker__wrapper {
+  border: none;
 }
 
 /******** Champions League Start *********/
@@ -261,9 +298,10 @@ html, body {
 }
 
 .group-name {
-  color: silver;
+  color: #dbdbdb;
   text-align: center;
   font-family: 'Concert One', cursive;
+  text-decoration: underline;
 }
 
 .table {
@@ -322,6 +360,7 @@ html, body {
   color: white;
   font-size: 12px;
   font-weight: bold;
+  color: black;
 }
 
 .cl-name .cl-draw {
@@ -332,6 +371,7 @@ html, body {
   font-size: 12px;
   font-weight: bold;
   margin: 5px;
+  color: black;
 }
 
 .cl-name .cl-lost {
@@ -341,6 +381,7 @@ html, body {
   color: white;
   font-size: 12px;
   font-weight: bold;
+  color: black;
 }
 
 .spans {
@@ -386,6 +427,43 @@ html, body {
 
 .css-t2rmvs {
   text-align: center;
+}
+
+.championsLeague-icon {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.championsLeague-icon p {
+  color: #dbdbdb;
+  margin-bottom: 0;
+  font-size: 31px;
+}
+
+.championsLeague-icon img {
+  margin: auto;
+  -webkit-filter: drop-shadow(1px 1px 5px white);
+          filter: drop-shadow(1px 1px 5px white);
+  margin-bottom: 13px;
+}
+
+.championsLeague-icon span {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #dbdbdb;
+  border: 1px solid white;
+  padding: 0 5px 0 5px;
+  font-size: 31px;
+}
+
+.other-teams {
+  padding-bottom: 45px;
 }
 
 .other-leagues-content {
@@ -436,6 +514,7 @@ html, body {
   color: white;
   font-size: 12px;
   font-weight: bold;
+  color: black;
 }
 
 .draw {
@@ -446,6 +525,7 @@ html, body {
   font-size: 12px;
   font-weight: bold;
   margin: 5px;
+  color: black;
 }
 
 .lost {
@@ -455,6 +535,7 @@ html, body {
   color: white;
   font-size: 12px;
   font-weight: bold;
+  color: black;
 }
 
 .points {
@@ -508,13 +589,6 @@ html, body {
   color: #5a5a5a;
 }
 
-.css-rq17bv {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  margin: auto;
-}
-
 .other-leagues-divs {
   display: -ms-grid;
   display: grid;
@@ -525,8 +599,40 @@ html, body {
   grid-column-gap: 100px;
 }
 
+.leagueName-icon {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.leagueName-icon p {
+  color: #dbdbdb;
+  margin-bottom: 0;
+  font-size: 31px;
+}
+
+.leagueName-icon img {
+  margin: auto;
+  -webkit-filter: drop-shadow(1px 1px 5px white);
+          filter: drop-shadow(1px 1px 5px white);
+  margin-bottom: 13px;
+}
+
+.leagueName-icon span {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #dbdbdb;
+  border: 1px solid white;
+  padding: 0 5px 0 5px;
+}
+
 .tr-scorers:nth-child(1) {
-  background: url("../img/cover-soccer.jpg");
+  background: url("../img/cover-soccer2.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -539,24 +645,23 @@ html, body {
 
 .tr-scorers:nth-child(1) .goal-number {
   background: white;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  line-height: 1.9;
+  line-height: 1.1;
   text-align: center;
   margin: auto;
+  color: black;
+  font-size: 35px;
+  font-weight: 100;
 }
 
 .tr-scorers:nth-child(1) p {
-  font-size: 35px;
   margin-bottom: 0;
-  color: black;
-  font-family: 'Russo One', sans-serif;
-  text-shadow: #f8f9fa 1px 0 10px;
 }
 
 .tr-scorers:nth-child(1) .td-scorers:nth-child(1) {
-  padding: 0;
+  padding: 20px;
   border: none;
   -ms-grid-columns: none;
       grid-template-columns: none;
@@ -564,8 +669,21 @@ html, body {
   margin: auto;
 }
 
+.tr-scorers:nth-child(1) .scorer-name {
+  font-size: 40px;
+  color: lightgreen;
+  text-transform: capitalize;
+}
+
+.tr-scorers:nth-child(1) .scorer-team {
+  font-size: 30px;
+  color: white;
+  text-shadow: #f8f9fa 1px 0 10px;
+  text-decoration: underline;
+}
+
 .tr-scorers:nth-child(1) .soccer-country {
-  text-align: center;
+  display: none;
 }
 
 .td-scorers {
@@ -618,6 +736,48 @@ p {
 .ball-icon {
   color: black;
   width: 20px;
+}
+
+.scorers-standings {
+  margin-top: 68px;
+}
+
+.scorers-icon {
+  margin-bottom: 10px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #dbdbdb;
+}
+
+.scorers-icon img {
+  margin: auto;
+}
+
+.scorers-icon p {
+  font-size: 31px;
+  margin: auto;
+  color: #dbdbdb;
+  font-family: 'Patrick Hand', cursive;
+  margin-bottom: 0;
+}
+
+.scorers-icon span {
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #dbdbdb;
+  border: 1px solid white;
+  padding: 0 5px 0 5px;
+  font-family: "Sarabun", sans-serif;
+}
+
+.scorers-icon .competitionName {
+  border: none;
+  font-family: 'Patrick Hand', cursive;
 }
 
 .my-carousel {
@@ -949,6 +1109,24 @@ svg {
   color: #dbdbdb;
 }
 
+.icon-two {
+  margin: 17px;
+}
+
+.football-data {
+  font-weight: bold;
+  font-size: 20px;
+  color: darkkhaki;
+}
+
+.footer-section-one {
+  text-align: center;
+}
+
+.footer-section-one p {
+  font-weight: bold;
+}
+
 .form__field {
   font-family: inherit;
   width: 100%;
@@ -971,34 +1149,5 @@ svg {
      border-image: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
      border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
-}
-
-.form__field:focus ~ .form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: #11998e;
-  font-weight: 700;
-}
-
-.icon-two {
-  margin: 17px;
-}
-
-.football-data {
-  font-weight: bold;
-  font-size: 20px;
-  color: darkkhaki;
-}
-
-.footer-section-one {
-  text-align: center;
-}
-
-.footer-section-one p {
-  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

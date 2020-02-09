@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+.other-teams{
+    padding-bottom: 45px;
+}
 .other-leagues-content{
     // display: grid;
     // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -5,6 +10,7 @@
     margin:auto;
     // min-height: 100%;
     min-height: 116vh;
+    // margin-top: 100px;
 }
 .td-other-competition{
     display: grid;
@@ -32,13 +38,16 @@
 }
 .won{
     @include info-span(#4caf50ad);
+    color: black;
 }
 .draw{
     @include info-span(rgb(241, 212, 78));
     margin: 5px;
+    color: black;
 }
 .lost{
     @include info-span(lightsalmon);
+    color: black;
 }
 
 .points{
@@ -80,21 +89,37 @@
         color: $my-silver;
     }
 }
-.other-teams{
-    // grid-column: 1/3;
-}
 
-
-.css-rq17bv{
-    grid-column: 3/4;
-    margin: auto;
-}
 .other-leagues-divs{
     display: grid;
     width: 80%;
     margin: auto;
-    // grid-template-columns: 2fr 1fr 2fr;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     grid-column-gap: 100px;
 
+}
+
+.leagueName-icon{
+    display: grid;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+    p{
+        color: $my-white;
+        margin-bottom: 0;
+        font-size: 31px;
+    }
+    img{
+        margin: auto;
+        filter: drop-shadow(1px 1px 5px white);
+        margin-bottom: 13px;
+    }
+    span{
+        font-family: 'Patrick Hand', cursive;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: $my-white;
+        border: 1px solid white;
+        padding: 0 5px 0 5px
+    }
 }

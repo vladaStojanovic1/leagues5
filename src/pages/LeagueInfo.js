@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { requestHeader } from '../components/requestHeader';
 import { TeamInfo } from '../entities/TeamInfo';
 import { ScorerInfo } from '../entities/ScorerInfo';
-import { DisplayLeagueInfo } from '../components/DisplayLeagueInfo'
 import { DisplayChampionsLeague } from '../components/DisplayChampionsLeague';
 import { DisplayOtherCompetitions } from '../components/DisplayOtherCompetitions';
 import { DisplayScorersStandings } from '../components/DisplayScorersStandings';
@@ -15,19 +15,14 @@ export const LeagueInfo = ({ match }) => {
     const [championsLeagueGroups, setChampionsLeagueGroups] = useState([]);
     const [scorersStandings, setScorersStandings] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const [competitionName, setCompetitionName] = useState('');
     /****** State ******/
 
     useEffect(() => {
         const teamsStandings = async () => {
-            const settings = {
-                method: 'get',
-                headers: {
-                    'X-Auth-Token': localStorage.getItem('myToken')
-                }
-            }
+
             setLoading(true)
-            const data = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/standings`, settings);
+            const data = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/standings`, requestHeader);
             const res = await data.json();
 
             const teams = res.standings[0].table.map((team) => {
@@ -36,21 +31,15 @@ export const LeagueInfo = ({ match }) => {
             const filterGroups = res.standings.filter((team) => {
                 return team.type === 'TOTAL';
             })
-
             setChampionsLeagueGroups(filterGroups)
             setTeams(teams);
+            setCompetitionName(res.competition.name);
             setLoading(false)
-
         }
 
         const scorersStandings = async () => {
-            const settings = {
-                method: 'GET',
-                headers: {
-                    'X-Auth-Token': localStorage.getItem('myToken')
-                }
-            }
-            const data = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/scorers`, settings);
+
+            const data = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/scorers`, requestHeader);
             const res = await data.json();
 
             const scorers = res.scorers.map((scorer) => {
@@ -62,6 +51,7 @@ export const LeagueInfo = ({ match }) => {
         scorersStandings();
     }, [])
 
+    console.log(competitionName);
 
 
     return (
@@ -71,8 +61,14 @@ export const LeagueInfo = ({ match }) => {
                 <div className='champion-league-content'>
                     {loading ? <LoaderBounce /> :
                         <div className='champion-league-divs'>
-                            <DisplayChampionsLeague championsLeagueGroups={championsLeagueGroups} />
-                            <DisplayScorersStandings scorersStandings={scorersStandings} />
+                            <DisplayChampionsLeague
+                                championsLeagueGroups={championsLeagueGroups}
+                                competitionName={competitionName}
+                            />
+                            <DisplayScorersStandings
+                                scorersStandings={scorersStandings}
+                                competitionName={competitionName}
+                            />
                         </div>
                     }
                 </div>
@@ -80,8 +76,12 @@ export const LeagueInfo = ({ match }) => {
                 <div className='other-leagues-content'>
                     {loading ? <LoaderBounce /> :
                         <div className='other-leagues-divs'>
-                            <DisplayOtherCompetitions teams={teams} />
-                            <DisplayScorersStandings scorersStandings={scorersStandings} />
+                            <DisplayOtherCompetitions
+                                teams={teams} competitionName={competitionName} />
+                            <DisplayScorersStandings
+                                scorersStandings={scorersStandings}
+                                competitionName={competitionName}
+                            />
                         </div>
                     }
                 </div>
@@ -89,4 +89,3 @@ export const LeagueInfo = ({ match }) => {
         </>
     )
 }
-

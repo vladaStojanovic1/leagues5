@@ -5,7 +5,7 @@
 
 
 .tr-scorers:nth-child(1){
-    background: url('../img/cover-soccer.jpg');
+    background: url('../img/cover-soccer2.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -15,29 +15,45 @@
      }
     .goal-number{
         background: rgb(255, 255, 255);
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
-        line-height: 1.9;
+        line-height: 1.1;
         text-align: center;
         margin: auto;
+        color: black;
+        font-size: 35px;
+        font-weight: 100;
     }
     p{
-        font-size: 35px;
+        // font-size: 35px;
         margin-bottom: 0;
-        color: black;
-        font-family: 'Russo One', sans-serif;
-        text-shadow: #f8f9fa 1px 0 10px;
+        // color: lightgreen;
+        // font-family: 'Russo One', sans-serif;
+        // text-shadow: #f8f9fa 1px 0 10px;
     }
     .td-scorers:nth-child(1){
-        padding: 0;
+        padding: 20px;
         border: none;
         grid-template-columns: none;
         text-align: center;
         margin: auto;
+        
+    }
+
+    .scorer-name{
+        font-size: 40px;
+        color: lightgreen;
+        text-transform: capitalize;
+    }
+    .scorer-team{
+        font-size: 30px;
+        color: white;
+        text-shadow: #f8f9fa 1px 0 10px;
+        text-decoration: underline;
     }
     .soccer-country{
-        text-align: center;
+        display: none;
     }
 }
 
@@ -86,4 +102,40 @@ p{
     color: black;
     width: 20px;
 
+}
+.scorers-standings{
+    margin-top: 68px
+}
+
+.scorers-icon{
+    margin-bottom: 10px;
+    // display: grid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: $my-white;
+    img{
+        margin: auto;
+    }
+    p{
+        font-size: 31px;
+        margin: auto;
+        color: $my-white;
+        font-family: 'Patrick Hand', cursive;
+        margin-bottom: 0;
+    }
+    span{
+        font-weight: bold;
+        letter-spacing: 2px;
+        // text-decoration: underline;
+        color: $my-white;
+        border: 1px solid white;
+        padding: 0 5px 0 5px;
+        font-family:$sarabun-font
+    }
+    .competitionName{
+        border: none;
+        font-family: 'Patrick Hand', cursive;
+        
+    }
 }
