@@ -18,6 +18,7 @@ html,body{
     background-attachment: fixed;
 }
 
+
 @import './variables';
 @import './mixins';
 @import './logo';
@@ -31,3 +32,5 @@ html,body{
 @import '../components/myCarousel/MyCarousel';
 @import '../components/bestPlayers/bestPlayers';
 @import '../components/footer/footer';
+@import '../pages/head2head/head2head';
+@import '../components/displayHead2Head/displayHead2Head';

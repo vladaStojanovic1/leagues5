@@ -10,8 +10,7 @@ import netherlands from '../img/iconLeague/netherlands.png'
 import portugal from '../img/iconLeague/portugal.png'
 import { Calendar } from './Calendar';
 import { Pagination } from './Pagination';
-import { FaRegFrown } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 
 export const TableResults = ({
     currentMatches,
@@ -82,35 +81,37 @@ export const TableResults = ({
                                     {moment(match.utcDate).format('HH:mm')}<br />{match.country}
                                 </td>
 
-                                <td className='td-content'>
-                                    <div className='flag-homeTeam' >
-                                        <div className='icon-country'>
-                                            {flags(match.competition.name)}
+                                <Link className='match-link' to={`head2head/${match.id}`}>
+                                    <td className='td-content'>
+                                        <div className='flag-homeTeam' >
+                                            <div className='icon-country'>
+                                                {flags(match.competition.name)}
 
+                                            </div>
+                                            <div className='home-team-name'>
+                                                <span>{match.homeTeam.name}</span>
+                                            </div>
                                         </div>
-                                        <div className='home-team-name'>
-                                            <span>{match.homeTeam.name}</span>
-                                        </div>
-                                    </div>
-                                    <div className='scores '>
-                                        {/* Animation for matches who going live*/}
-                                        <div className={match.status === 'IN_PLAY' ? 'animated infinite flash slower' : null}>
-                                            <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.homeTeam}</span> -&nbsp;
+                                        <div className='scores '>
+                                            {/* Animation for matches who going live*/}
+                                            <div className={match.status === 'IN_PLAY' ? 'animated infinite flash slower' : null}>
+                                                <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.homeTeam}</span> -&nbsp;
                                             <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.awayTeam}</span>
-                                        </div>
-                                        {match.score.halfTime.homeTeam !== null ?
-                                            <div className='half-time-res' >
-                                                (<span>{match.score.halfTime.homeTeam}</span> -&nbsp;
+                                            </div>
+                                            {match.score.halfTime.homeTeam !== null ?
+                                                <div className='half-time-res' >
+                                                    (<span>{match.score.halfTime.homeTeam}</span> -&nbsp;
                                                 <span>{match.score.halfTime.awayTeam}</span>)
                                              </div>
-                                            : null
-                                        }
-                                    </div>
-                                    <div className='away-team-name'>
-                                        <span>{match.awayTeam.name}</span>
-                                    </div>
-                                    {halfTimeStatus(match.status)}
-                                </td>
+                                                : null
+                                            }
+                                        </div>
+                                        <div className='away-team-name'>
+                                            <span>{match.awayTeam.name}</span>
+                                        </div>
+                                        {halfTimeStatus(match.status)}
+                                    </td>
+                                </Link>
                             </tr>
                         )
                     })}

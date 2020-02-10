@@ -10,6 +10,7 @@
 @import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Jua&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -256,6 +257,11 @@ html, body {
   border-radius: 12px;
 }
 
+.match-link:focus, .match-link:hover, .match-link:visited, .match-link:link, .match-link:active {
+  text-decoration: none;
+  color: #3f3e3e;
+}
+
 .container-content {
   display: -ms-grid;
   display: grid;
@@ -406,6 +412,7 @@ html, body {
           box-shadow: 1px 1px 1px 1px silver;
   color: #3f3e3e;
   font-family: "Sarabun", sans-serif;
+  text-align: center;
 }
 
 .cl-points p:nth-child(1) {
@@ -1149,5 +1156,220 @@ svg {
      border-image: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
      border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
+}
+
+.test {
+  position: relative;
+}
+
+.test img {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.test .home {
+  position: absolute;
+  left: 448px;
+  top: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 1.1;
+  font-size: 80px;
+  width: 85px;
+  height: 85px;
+  font-family: 'Russo One', sans-serif;
+  color: #dbdbdb;
+}
+
+.test .away {
+  position: absolute;
+  right: 448px;
+  top: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 1.1;
+  font-size: 80px;
+  width: 85px;
+  height: 85px;
+  font-family: 'Russo One', sans-serif;
+  color: #dbdbdb;
+}
+
+.test .match-status {
+  position: absolute;
+  left: 703px;
+  bottom: 26px;
+  font-size: 22px;
+  border-radius: 20px;
+  padding: 0 15px 0 15px;
+  background: #b14343;
+}
+
+.teams-name {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 50%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teams-name p {
+  font-size: 21px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 0 5px 0;
+  color: #dbdbdb;
+  background: linear-gradient(45deg, #000000, transparent);
+  border-radius: 30px;
+}
+
+.head2head {
+  background: black;
+  width: 80%;
+  margin: auto;
+  border-radius: 24px;
+  opacity: 0.8;
+  padding: 15px;
+}
+
+.head2head .stadium-name {
+  font-weight: bold;
+}
+
+.head2head .halfTime {
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.head2head .halfTime:nth-child(2) {
+  font-weight: bold;
+  font-size: 29px;
+  border: 1px solid white;
+  padding: 4px;
+  border-color: lightgreen;
+}
+
+.head2head .halfTime:nth-child(4) {
+  font-weight: bold;
+  font-size: 29px;
+  border: 1px solid white;
+  padding: 4px;
+  border-color: lightgreen;
+}
+
+.head2head h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.head2head .wins {
+  font-size: 30px;
+  font-weight: bold;
+  background: lightgreen;
+  width: 55px;
+  height: 55px;
+  padding: 3px;
+  color: black;
+}
+
+.head2head .draws {
+  font-size: 30px;
+  font-weight: bold;
+  background: #ffc107;
+  width: 55px;
+  height: 55px;
+  padding: 3px;
+  color: black;
+}
+
+.head2head .losses {
+  font-size: 30px;
+  font-weight: bold;
+  background: #dc3545;
+  width: 55px;
+  height: 55px;
+  padding: 3px;
+  color: black;
+}
+
+.head2head .numOfMatches {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.head2head .numOfMatches span {
+  font-size: 30px;
+  background: #12a1f9;
+  font-size: 30px;
+  font-weight: bold;
+  width: 55px;
+  height: 55px;
+  padding: 3px;
+  color: black;
+}
+
+.head2head .total-goals {
+  padding-top: 40px;
+}
+
+.head2head .total-goals span {
+  font-size: 30px;
+  background: #12a1f9;
+  font-size: 30px;
+  font-weight: bold;
+  width: 55px;
+  height: 55px;
+  padding: 3px;
+  color: black;
+}
+
+.head2head .referees {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 30px;
+}
+
+.head2head .referees span {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1350px) {
+  .home {
+    left: 248px !important;
+    top: 50px !important;
+  }
+  .away {
+    right: 248px !important;
+    top: 50px !important;
+  }
+  .match-status {
+    left: 483px !important;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .home {
+    left: 220px !important;
+    top: 20px !important;
+  }
+  .away {
+    right: 220px !important;
+    top: 20px !important;
+  }
+  .test {
+    width: 100% !important;
+  }
+  .match-status {
+    bottom: 4px !important;
+    left: 352px !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

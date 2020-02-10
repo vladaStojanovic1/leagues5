@@ -12,3 +12,13 @@
     font-size: 12px;
     font-weight: bold;
 }
+
+@mixin matchInfo($background) {
+    font-size: 30px;
+    font-weight: bold;
+    background: $background;
+    width: 55px;
+    height: 55px;
+    padding: 3px;
+    color: black;
+}

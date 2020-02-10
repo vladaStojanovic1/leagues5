@@ -4,8 +4,6 @@ import championsLeague from '../img/championsLeague.png'
 
 export const DisplayChampionsLeague = ({ championsLeagueGroups, competitionName }) => {
 
-
-
     return (
         <div style={{ paddingTop: '32px', paddingBottom: '45px' }}>
             <div className='championsLeague-icon'>
@@ -17,7 +15,6 @@ export const DisplayChampionsLeague = ({ championsLeagueGroups, competitionName 
                 {championsLeagueGroups.map((group, index) => {
 
                     return (
-
                         <div key={index}>
                             <h3 className='group-name'>{group.group.replace('_', ' ')}</h3>
                             {group.table.map((group, index) => {

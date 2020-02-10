@@ -59,6 +59,7 @@ export const LeagueInfo = ({ match }) => {
             {/* Because is a diffrent data from API*/}
             {match.params.id === '2001' ?
                 <div className='champion-league-content'>
+                    <p>Check out the latest Champions League results and top scorers</p>
                     {loading ? <LoaderBounce /> :
                         <div className='champion-league-divs'>
                             <DisplayChampionsLeague
