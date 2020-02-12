@@ -1,0 +1,240 @@
+
+@media only screen and (max-width: 600px){
+
+    /******** Log Section Start *******/
+    .logo-content{
+        h1{
+            font-size: 36px;
+            letter-spacing: normal;
+        }
+        span{
+            font-size: 53px !important;
+        }
+        img{
+            width: 36px;
+        }
+    }
+    .logo-div{
+        margin-bottom: 37px;
+        p{
+            font-size: 10px;
+        }
+    }
+
+    .descriptions-p{
+        text-align: center;
+        font-size: 13px;
+    }
+    /******** Log Section Start *******/
+
+    .container-content{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 97%;
+    }
+    .my-carousel{
+        width: 100%;
+
+        svg{
+            display: none;
+        }
+        h3{
+            font-size: 24px;
+            background: none;
+            color: $my-white !important;
+        }
+        .carousel-title{
+            margin-bottom: 30px;
+            h3{
+                text-align: center;
+            }
+        }
+    }
+    .calendar-div{
+        display: grid !important;
+        justify-content: unset !important;
+        .calendar{
+            background: limegreen;
+            padding: 0;
+            input, rect, span ,svg{
+                color: white !important;
+                font-weight: bold;
+            }
+            border: none;
+        }
+    }
+
+    /******** Table Results Section Start *******/
+    .schedule-p{
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+    .all-cards{
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    }
+    .td-content{
+        font-size: 13px;
+        grid-template-columns: 0fr 2fr 1fr 2fr 0fr 1fr;
+    }
+    .halfTime-status{
+        span{
+            font-size: 8px;
+        }
+    }
+    .td-date{
+        font-size: 11px;
+    }
+    .scores{
+        .homeScore{
+            font-size: 14px;
+        }
+        .awayScore{
+            font-size: 14px;
+        }
+    }
+    .half-time-res{
+        span{
+            font-size: 12px;
+        }
+    }
+    /******** Table Results Section Start *******/
+    
+    .match-status{
+        left:130px !important; 
+        color: lime;
+    }
+    .champion-league-divs{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /******** Best Players Section Start *******/
+    .best-players{
+        margin-top: 30px;
+        .text-players{
+            font-size: 17px;
+        }
+    }
+    .best-players-content{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .ronaldo{
+        width: 96%;
+        margin: auto;
+        img{
+            width: 212px;
+        }
+        .ronaldo-info{
+            span{
+                color: $my-black;
+            }
+            img{
+                width: 20px !important;
+            }
+        }
+        div:nth-child(1){
+            font-size: 11px;
+            order: 2;
+            grid-column: 2/3;
+            grid-row: 1;
+        }
+        div:nth-child(2){
+            order: 1;
+            grid-column: 1/3;
+            grid-row: 1;
+            z-index: 10;
+            font-size: 12px;
+            color: $my-silver;
+        }
+    }
+    .messi{
+        width: 96%;
+        margin: auto;
+        img{
+            width: 190px;
+        }
+        .messi-info{
+            span{
+                color: $my-black;
+            }
+            img{
+                width: 20px !important;
+            }
+        }
+        div:nth-child(1){
+            font-size: 11px;
+            order: 1;
+            grid-column: 1/3;
+            grid-row: 1;
+            z-index: 10;
+        }
+        div:nth-child(2){
+            order: 2;
+            grid-column: 1/2;
+            grid-row: 1;
+            font-size: 12px;
+            color: $my-silver;
+        }
+    }
+    .page-link{
+        padding: 2px 6px 2px 6px !important;
+        margin: 5px;
+    }
+    /******** Best Players Section End *******/
+
+
+    /******** Footer Section Start *******/
+    .footer-content{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        text-align: center;
+        padding: 50px 0 0 0;
+        grid-row-gap: 50px;
+        .footer-section-one{
+            font-size: 15px;
+            p{
+                font-weight: normal;
+            }
+        }
+        .icon-footer{
+            font-size: 22px;
+        }
+        .icon-two{
+            margin: 10px;
+        }
+        .link-footer{
+            font-weight: normal;
+        }
+        .adress-footer{
+            span{
+                font-weight: normal;
+            }
+            p{
+                margin-bottom: 5px;
+            }
+        }
+        .input-footer{
+            padding-bottom: 50px;
+            .form__field{
+                text-align: center;
+            }
+            button{
+                margin: auto;
+                margin-top: 19px;
+                font-weight: normal;
+            }
+            p{
+                margin-bottom: 5px;
+            }
+            ::placeholder{
+                font-size: 14px;
+            }    
+        }
+    }
+        .footer-end{
+            span{
+                color: #33c24a;
+            }
+        }
+    /******** Footer Section End *******/
+
+}
+

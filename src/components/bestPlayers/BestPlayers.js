@@ -29,42 +29,42 @@ export const BestPlayers = () => {
 
                     </div>
                     <div style={{ margin: 'auto 0', textAlign: 'start' }}>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>Golden Ball</p> &nbsp;
                             <img src={goldenBall} alt="" style={{ width: '30px' }} />
                             <span>x5</span>
                         </div>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>Champions League Winner</p> &nbsp;
                             <img src={cl} alt="" style={{ width: '30px' }} />
                             <span>x5</span>
                         </div>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>Top Scorer</p> &nbsp;
                             <img src={topScorer} alt="" style={{ width: '40px' }} />
                             <span>x17</span>
                         </div>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>English Champion</p> &nbsp;
                             <img src={premierLeague} alt="" style={{ width: '40px' }} />
                             <span>x3</span>
                         </div>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>Spanish Champion</p> &nbsp;
                             <img src={spanish} alt="" style={{ width: '40px' }} />
                             <span>x2</span>
                         </div>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>Italian Champion</p> &nbsp;
                             <img src={italy} alt="" style={{ width: '40px' }} />
                             <span>x1</span>
                         </div>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>European Champion</p> &nbsp;
                             <img src={europe} alt="" style={{ width: '40px' }} />
                             <span>x1</span>
                         </div>
-                        <div className='golden-ball'>
+                        <div className='ronaldo-info'>
                             <p>UEFA Best Player in Europe</p> &nbsp;
                             <img src={uefa} alt="" style={{ width: '40px' }} />
                             <span>x4</span>

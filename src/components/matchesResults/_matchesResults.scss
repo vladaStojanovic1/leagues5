@@ -21,10 +21,24 @@
     text-align: end;
     grid-column: 1/3;
 }
+.calendar-div{
+    display: flex;
+    justify-content: space-between;
+    span{
+        color: lightgreen;
+    }
+}
 .scores{
     text-align: center;
     grid-column: 3/4;
     font-weight: bold;
+
+    .homeScore{
+        font-size: 18px;
+    }
+    .awayScore{
+        font-size: 18px;
+    }
 }
 .half-time-res{
     font-size: 13px;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment';
-import { TableResults } from './TableResults';
-import { LoaderClock } from './clockLoader/LoaderClock';
-import { requestHeader } from './requestHeader';
+import { TableResults } from '../TableResults';
+import { LoaderClock } from '../clockLoader/LoaderClock';
+import { requestHeader } from '../requestHeader';
 
 export const MatchesResults = () => {
 
@@ -53,7 +53,6 @@ export const MatchesResults = () => {
     let matchesLength = matches.length;
     /*** Pagination ***/
 
-    console.log(matchesLength)
 
     return (
         <div >

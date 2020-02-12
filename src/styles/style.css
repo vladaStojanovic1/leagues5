@@ -198,12 +198,33 @@ html, body {
   grid-column: 1/3;
 }
 
+.calendar-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calendar-div span {
+  color: lightgreen;
+}
+
 .scores {
   text-align: center;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
   font-weight: bold;
+}
+
+.scores .homeScore {
+  font-size: 18px;
+}
+
+.scores .awayScore {
+  font-size: 18px;
 }
 
 .half-time-res {
@@ -270,6 +291,7 @@ html, body {
   width: 90%;
   margin: auto;
   grid-column-gap: 135px;
+  grid-row-gap: 80px;
 }
 
 .calendar {
@@ -798,11 +820,14 @@ p {
   font-family: "Sarabun", sans-serif;
   font-size: 30px;
   text-align: start;
-  font-weight: 400;
-  background: linear-gradient(45deg, white, transparent);
-  color: black !important;
+  font-weight: bold;
+  color: #dbdbdb;
   padding-left: 15px;
   border-radius: 10px;
+}
+
+.my-carousel .topLeagues-span {
+  color: lightgreen;
 }
 
 .carousel-div {
@@ -810,7 +835,6 @@ p {
   opacity: 0.8;
   border-radius: 20px;
   margin: 10px;
-  cursor: pointer;
 }
 
 .carousel-content {
@@ -930,7 +954,7 @@ svg {
           filter: drop-shadow(5px 9px 10px #222);
 }
 
-.golden-ball {
+.ronaldo-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -940,12 +964,12 @@ svg {
   margin-bottom: 9px;
 }
 
-.golden-ball P {
+.ronaldo-info P {
   margin-bottom: 0;
   border-bottom: 1px solid black;
 }
 
-.golden-ball span {
+.ronaldo-info span {
   font-size: 22px;
 }
 
@@ -1158,6 +1182,14 @@ svg {
   border-image-slice: 1;
 }
 
+.head2head-content {
+  min-height: 100vh;
+  text-align: center;
+  height: 100vh;
+  margin-bottom: 270px;
+  color: white;
+}
+
 .test {
   position: relative;
 }
@@ -1228,6 +1260,17 @@ svg {
   color: #dbdbdb;
   background: linear-gradient(45deg, #000000, transparent);
   border-radius: 30px;
+}
+
+.teams-name p:nth-child(1) {
+  border: 1px solid white;
+  margin-bottom: 0;
+}
+
+.teams-name p:nth-child(2) {
+  border: 1px solid white;
+  margin-bottom: 0;
+  margin-left: 5px;
 }
 
 .head2head {
@@ -1371,5 +1414,256 @@ svg {
     bottom: 4px !important;
     left: 352px !important;
   }
+}
+
+@media only screen and (max-width: 600px) {
+  /******** Log Section Start *******/
+  .logo-content h1 {
+    font-size: 36px;
+    letter-spacing: normal;
+  }
+  .logo-content span {
+    font-size: 53px !important;
+  }
+  .logo-content img {
+    width: 36px;
+  }
+  .logo-div {
+    margin-bottom: 37px;
+  }
+  .logo-div p {
+    font-size: 10px;
+  }
+  .descriptions-p {
+    text-align: center;
+    font-size: 13px;
+  }
+  /******** Log Section Start *******/
+  .container-content {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 97%;
+  }
+  .my-carousel {
+    width: 100%;
+  }
+  .my-carousel svg {
+    display: none;
+  }
+  .my-carousel h3 {
+    font-size: 24px;
+    background: none;
+    color: #dbdbdb !important;
+  }
+  .my-carousel .carousel-title {
+    margin-bottom: 30px;
+  }
+  .my-carousel .carousel-title h3 {
+    text-align: center;
+  }
+  .calendar-div {
+    display: -ms-grid !important;
+    display: grid !important;
+    -webkit-box-pack: unset !important;
+        -ms-flex-pack: unset !important;
+            justify-content: unset !important;
+  }
+  .calendar-div .calendar {
+    background: limegreen;
+    padding: 0;
+    border: none;
+  }
+  .calendar-div .calendar input, .calendar-div .calendar rect, .calendar-div .calendar span, .calendar-div .calendar svg {
+    color: white !important;
+    font-weight: bold;
+  }
+  /******** Table Results Section Start *******/
+  .schedule-p {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .all-cards {
+    -ms-grid-columns: (minmax(90px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  }
+  .td-content {
+    font-size: 13px;
+    -ms-grid-columns: 0fr 2fr 1fr 2fr 0fr 1fr;
+        grid-template-columns: 0fr 2fr 1fr 2fr 0fr 1fr;
+  }
+  .halfTime-status span {
+    font-size: 8px;
+  }
+  .td-date {
+    font-size: 11px;
+  }
+  .scores .homeScore {
+    font-size: 14px;
+  }
+  .scores .awayScore {
+    font-size: 14px;
+  }
+  .half-time-res span {
+    font-size: 12px;
+  }
+  /******** Table Results Section Start *******/
+  .match-status {
+    left: 130px !important;
+    color: lime;
+  }
+  .champion-league-divs {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  /******** Best Players Section Start *******/
+  .best-players {
+    margin-top: 30px;
+  }
+  .best-players .text-players {
+    font-size: 17px;
+  }
+  .best-players-content {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .ronaldo {
+    width: 96%;
+    margin: auto;
+  }
+  .ronaldo img {
+    width: 212px;
+  }
+  .ronaldo .ronaldo-info span {
+    color: #3f3e3e;
+  }
+  .ronaldo .ronaldo-info img {
+    width: 20px !important;
+  }
+  .ronaldo div:nth-child(1) {
+    font-size: 11px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .ronaldo div:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    z-index: 10;
+    font-size: 12px;
+    color: #5a5a5a;
+  }
+  .messi {
+    width: 96%;
+    margin: auto;
+  }
+  .messi img {
+    width: 190px;
+  }
+  .messi .messi-info span {
+    color: #3f3e3e;
+  }
+  .messi .messi-info img {
+    width: 20px !important;
+  }
+  .messi div:nth-child(1) {
+    font-size: 11px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    z-index: 10;
+  }
+  .messi div:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    font-size: 12px;
+    color: #5a5a5a;
+  }
+  .page-link {
+    padding: 2px 6px 2px 6px !important;
+    margin: 5px;
+  }
+  /******** Best Players Section End *******/
+  /******** Footer Section Start *******/
+  .footer-content {
+    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    text-align: center;
+    padding: 50px 0 0 0;
+    grid-row-gap: 50px;
+  }
+  .footer-content .footer-section-one {
+    font-size: 15px;
+  }
+  .footer-content .footer-section-one p {
+    font-weight: normal;
+  }
+  .footer-content .icon-footer {
+    font-size: 22px;
+  }
+  .footer-content .icon-two {
+    margin: 10px;
+  }
+  .footer-content .link-footer {
+    font-weight: normal;
+  }
+  .footer-content .adress-footer span {
+    font-weight: normal;
+  }
+  .footer-content .adress-footer p {
+    margin-bottom: 5px;
+  }
+  .footer-content .input-footer {
+    padding-bottom: 50px;
+  }
+  .footer-content .input-footer .form__field {
+    text-align: center;
+  }
+  .footer-content .input-footer button {
+    margin: auto;
+    margin-top: 19px;
+    font-weight: normal;
+  }
+  .footer-content .input-footer p {
+    margin-bottom: 5px;
+  }
+  .footer-content .input-footer ::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .footer-content .input-footer :-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .footer-content .input-footer ::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .footer-content .input-footer ::placeholder {
+    font-size: 14px;
+  }
+  .footer-end span {
+    color: #33c24a;
+  }
+  /******** Footer Section End *******/
 }
 /*# sourceMappingURL=style.css.map */

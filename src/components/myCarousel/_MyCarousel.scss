@@ -9,11 +9,15 @@
         font-family: $sarabun-font;
         font-size: 30px;
         text-align: start;
-        font-weight: 400;
-        background: linear-gradient(45deg, white, transparent);
-        color: black !important;
+        font-weight: bold;
+        // background: linear-gradient(45deg, white, transparent);
+        // color: black !important;
+        color: $my-white;
         padding-left: 15px;
         border-radius: 10px;
+    }
+    .topLeagues-span{
+        color: lightgreen;
     }
 }
 
@@ -23,7 +27,7 @@
     opacity: 0.8;
     border-radius: 20px;
     margin: 10px;
-    cursor: pointer;
+    // cursor: pointer;
 }
 
 .carousel-content{

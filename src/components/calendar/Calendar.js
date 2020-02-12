@@ -1,7 +1,6 @@
 import React from 'react'
 import DatePicker from 'react-date-picker';
-import { GoCalendar } from 'react-icons/go';
-import calendar from '../img/calendar.png'
+import calendar from '../../img/calendar.png'
 
 export const Calendar = ({ handleDate, date }) => {
 

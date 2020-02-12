@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles/style.css';
-import { Logo } from './components/Logo';
-import { Container } from './components/Container';
+import { Logo } from './components/logo/Logo';
+import { Container } from './components/container/Container';
 import { Route, Switch } from 'react-router-dom';
-import { LeagueInfo } from './pages/LeagueInfo';
+import { LeagueInfo } from './pages/leagueInfo/LeagueInfo';
 import { Footer } from './components/footer/Footer';
 import { Head2Head } from './pages/head2head/Head2Head';
 

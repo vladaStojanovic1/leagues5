@@ -7,7 +7,6 @@ export const DisplayScorersStandings = ({ scorersStandings, competitionName }) =
     return (
         <div className='scorers-standings'>
             <div className='scorers-icon'>
-                {/* <img src={goal} alt="" style={{ width: '100px' }} /> */}
                 <p><span className='competitionName'>{competitionName}</span><span>TOP Scorers</span> </p>
             </div>
             <Table striped hover>

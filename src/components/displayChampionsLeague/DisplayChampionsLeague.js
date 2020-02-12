@@ -1,15 +1,17 @@
 import React from 'react'
 import { Table } from 'react-bootstrap';
-import championsLeague from '../img/championsLeague.png'
+import championsLeague from '../../img/championsLeague.png'
 
 export const DisplayChampionsLeague = ({ championsLeagueGroups, competitionName }) => {
 
     return (
         <div style={{ paddingTop: '32px', paddingBottom: '45px' }}>
+
             <div className='championsLeague-icon'>
                 <img src={championsLeague} alt="" style={{ width: '70px' }} />
                 <p style={{ color: 'white', fontSize: '21px', marginBottom: '0' }}><span>{competitionName}</span> standings</p>
             </div>
+
             <div className='champions-league' >
 
                 {championsLeagueGroups.map((group, index) => {

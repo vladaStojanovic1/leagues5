@@ -1,10 +1,10 @@
 import React from 'react'
-import serieA from '../img/serie a 1.png';
-import championLeague from '../img/uefa-champions-league.png';
-import laLiga from '../img/laliga2.png';
-import franceLeague from '../img/france ligue 1.png';
-import bundesLeague from '../img/Bundesliga 1.png';
-import premierLeague from '../img/premier4.png';
+import serieA from '../../img/serie a 1.png';
+import championLeague from '../../img/uefa-champions-league.png';
+import laLiga from '../../img/laliga2.png';
+import franceLeague from '../../img/france ligue 1.png';
+import bundesLeague from '../../img/Bundesliga 1.png';
+import premierLeague from '../../img/premier4.png';
 import { Link } from 'react-router-dom';
 
 

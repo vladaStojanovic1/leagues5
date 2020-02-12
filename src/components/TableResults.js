@@ -8,8 +8,8 @@ import italy from '../img/iconLeague/italy.png'
 import germany from '../img/iconLeague/germany.png'
 import netherlands from '../img/iconLeague/netherlands.png'
 import portugal from '../img/iconLeague/portugal.png'
-import { Calendar } from './Calendar';
-import { Pagination } from './Pagination';
+import { Calendar } from './calendar/Calendar';
+import { Pagination } from './pagination/Pagination';
 import { Link } from 'react-router-dom';
 
 export const TableResults = ({
@@ -61,8 +61,8 @@ export const TableResults = ({
         <div className='table' >
 
             {/* Calendar */}
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h3 className='schedule-p'>Schedule & upcoming Matches</h3>
+            <div className='calendar-div'>
+                <h3 className='schedule-p'>Schedule, upcoming matches & <span>live scores.</span></h3>
                 <div>
                     <Calendar handleDate={handleDate} date={date} />
                 </div>
@@ -95,8 +95,8 @@ export const TableResults = ({
                                         <div className='scores '>
                                             {/* Animation for matches who going live*/}
                                             <div className={match.status === 'IN_PLAY' ? 'animated infinite flash slower' : null}>
-                                                <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.homeTeam}</span> -&nbsp;
-                                            <span className='animated infinite bounce' style={{ fontSize: '18px' }}>{match.score.fullTime.awayTeam}</span>
+                                                <span className='homeScore'>{match.score.fullTime.homeTeam}</span> -&nbsp;
+                                                <span className='awayScore'>{match.score.fullTime.awayTeam}</span>
                                             </div>
                                             {match.score.halfTime.homeTeam !== null ?
                                                 <div className='half-time-res' >

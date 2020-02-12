@@ -1,11 +1,11 @@
 import React from 'react'
 import { Table } from 'react-bootstrap';
-import premierLeague from '../img/premier2.png';
-import serieA from '../img/serie a 1.png';
-import primeraDivision from '../img/la liga 1.png';
-import bundesliga from '../img/Bundesliga 2.png';
-import ligue1 from '../img/france ligue2.png';
-import championsLeague from '../img/championsLeague.png';
+import premierLeague from '../../img/premier2.png';
+import serieA from '../../img/serie a 1.png';
+import primeraDivision from '../../img/la liga 1.png';
+import bundesliga from '../../img/Bundesliga 2.png';
+import ligue1 from '../../img/france ligue2.png';
+// import championsLeague from '../../img/championsLeague.png';
 
 export const DisplayOtherCompetitions = ({ teams, competitionName }) => {
 

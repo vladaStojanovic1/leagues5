@@ -1,3 +1,5 @@
+
+
 export class MatchInfo {
     constructor(res) {
         this.numOfMatches = res.head2head.numberOfMatches;

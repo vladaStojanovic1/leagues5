@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
+
+.head2head-content{
+    min-height: 100vh;
+    text-align: center;
+    height: 100vh;
+    margin-bottom: 270px;
+    color: white;
+}
+
 .test{
     position: relative;
 img{
@@ -11,7 +20,6 @@ img{
     position: absolute;
     left: 448px;
     top: 80px;
-    
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
@@ -26,7 +34,6 @@ img{
     position: absolute;
     right: 448px;
     top: 80px;
-    
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
@@ -61,10 +68,18 @@ img{
         font-weight: bold;
         text-transform: uppercase;
         padding:5px 0 5px 0;
-        // filter: drop-shadow(1px 1px 5px white);
         color: $my-white;
         background: linear-gradient(45deg, #000000, transparent);
         border-radius: 30px;
+    }
+    p:nth-child(1){
+        border: 1px solid white;
+        margin-bottom: 0;
+    }
+    p:nth-child(2){
+        border: 1px solid white;
+        margin-bottom: 0;
+        margin-left: 5px;
     }
 }
 

@@ -21,16 +21,18 @@ html,body{
 
 @import './variables';
 @import './mixins';
-@import './logo';
-@import './leaguesLinks';
-@import './matchesResults';
-@import './container';
-@import './calendar';
-@import './championsLeague';
-@import './otherCompetitions';
-@import './scorersStandings';
+@import '../components/logo/logo';
+@import '../components/leagueLinks/leaguesLinks';
+@import '../components/matchesResults/matchesResults';
+@import '../components/container/container';
+@import '../components/calendar/calendar';
+@import '../components/displayChampionsLeague/championsLeague';
+@import '../components/displayOtherCompetitions/otherCompetitions';
+@import '../components/displayScorersStandings/scorersStandings';
 @import '../components/myCarousel/MyCarousel';
 @import '../components/bestPlayers/bestPlayers';
 @import '../components/footer/footer';
 @import '../pages/head2head/head2head';
 @import '../components/displayHead2Head/displayHead2Head';
+// Responsive:
+@import '../styles/responsiveDesigns/mobile';

@@ -1,5 +1,5 @@
 import React from 'react'
-import ball from '../img/ball2.png';
+import ball from '../../img/ball2.png';
 import { Link } from 'react-router-dom';
 
 

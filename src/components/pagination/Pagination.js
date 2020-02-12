@@ -11,7 +11,6 @@ export const Pagination = ({ matchesPerPage, matchesLength, paginate }) => {
 
     return (
         <nav style={{ marginTop: '10px' }}>
-
             <ul className="pagination">
                 {pageNumbers.map(number => (
                     <li className="page-item" key={number}>
