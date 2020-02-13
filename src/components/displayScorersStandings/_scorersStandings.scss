@@ -25,20 +25,13 @@
         font-size: 35px;
         font-weight: 100;
     }
-    p{
-        // font-size: 35px;
-        margin-bottom: 0;
-        // color: lightgreen;
-        // font-family: 'Russo One', sans-serif;
-        // text-shadow: #f8f9fa 1px 0 10px;
-    }
+  
     .td-scorers:nth-child(1){
         padding: 20px;
         border: none;
         grid-template-columns: none;
         text-align: center;
         margin: auto;
-        
     }
 
     .scorer-name{
@@ -137,5 +130,8 @@ p{
         border: none;
         font-family: 'Patrick Hand', cursive;
         
+    }
+    .top-scorers{
+        color: lightgreen;
     }
 }

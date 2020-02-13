@@ -16,13 +16,13 @@ export const DisplayHead2Head = ({ matchInfo }) => {
 
     return (
         <div className='head2head-content'>
-            <h2>Match Facts</h2>
+            <h2 className='match-facts'>Match Facts</h2>
             <div style={{ margin: 'auto', marginTop: '20px' }}>
                 <div className='teams-name' >
                     <p >{matchInfo.homeTeamName}</p>
                     <p >{matchInfo.awayTeamName}</p>
                 </div>
-                <div className='test' style={{ width: '80%', margin: 'auto' }}>
+                <div className='stadium-content' style={{ width: '80%', margin: 'auto' }}>
                     <img src={stadium} alt="" style={{ width: '100%' }} />
 
                     {/********** Animation for matches who going live ************/}
@@ -72,9 +72,10 @@ export const DisplayHead2Head = ({ matchInfo }) => {
                 {/**********  Display Referees ***********/}
                 <div className='referees'>
                     <h2>Referees</h2>
-                    {matchInfo.referees ? matchInfo.referees.map((r) => (
-                        <span>{r.name}</span>
+                    {matchInfo.referees ? matchInfo.referees.map((referee, index) => (
+                        <span key={index}>{referee.name}</span>
                     )) : null}
+                    {!matchInfo.referees.length ? <p>- 5 minutes before the match starts -</p> : null}
                 </div>
             </div>
         </div>

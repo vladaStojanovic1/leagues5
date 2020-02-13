@@ -5,7 +5,7 @@ import championsLeague from '../../img/championsLeague.png'
 export const DisplayChampionsLeague = ({ championsLeagueGroups, competitionName }) => {
 
     return (
-        <div style={{ paddingTop: '32px', paddingBottom: '45px' }}>
+        <div className='championsLeague-section' >
 
             <div className='championsLeague-icon'>
                 <img src={championsLeague} alt="" style={{ width: '70px' }} />

@@ -7,7 +7,7 @@ export const DisplayScorersStandings = ({ scorersStandings, competitionName }) =
     return (
         <div className='scorers-standings'>
             <div className='scorers-icon'>
-                <p><span className='competitionName'>{competitionName}</span><span>TOP Scorers</span> </p>
+                <p><span className='competitionName'>{competitionName}</span><span className='top-scorers'>TOP Scorers</span> </p>
             </div>
             <Table striped hover>
                 <tbody style={{ background: 'azure' }}>
@@ -20,7 +20,7 @@ export const DisplayScorersStandings = ({ scorersStandings, competitionName }) =
                                         <p className='scorer-name'>{scorer.name}</p>
                                         <p className='scorer-team'>{scorer.team}</p>
                                     </div>
-                                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
+                                    <div className='numScores' style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
                                         <p className='goal-number'>{scorer.numberOfGoals}</p>
                                         <IoIosFootball style={{ color: 'black', width: '20px' }} />
                                     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/style.css';
 import { Logo } from './components/logo/Logo';
-import { Container } from './components/container/Container';
+import { Container } from './pages/container/Container';
 import { Route, Switch } from 'react-router-dom';
 import { LeagueInfo } from './pages/leagueInfo/LeagueInfo';
 import { Footer } from './components/footer/Footer';

@@ -1,15 +1,16 @@
 import React from 'react'
 import { Table } from 'react-bootstrap';
 import moment from 'moment';
-import spain from '../img/iconLeague/spain.png'
-import england from '../img/iconLeague/england.png'
-import france from '../img/iconLeague/france.png'
-import italy from '../img/iconLeague/italy.png'
-import germany from '../img/iconLeague/germany.png'
-import netherlands from '../img/iconLeague/netherlands.png'
-import portugal from '../img/iconLeague/portugal.png'
-import { Calendar } from './calendar/Calendar';
-import { Pagination } from './pagination/Pagination';
+import spain from '../../img/iconLeague/spain.png'
+import england from '../../img/iconLeague/england.png'
+import france from '../../img/iconLeague/france.png'
+import italy from '../../img/iconLeague/italy.png'
+import germany from '../../img/iconLeague/germany.png'
+import netherlands from '../../img/iconLeague/netherlands.png'
+import portugal from '../../img/iconLeague/portugal.png'
+import championsLeague from '../../img/uefa-champions-league.png'
+import { Calendar } from '../calendar/Calendar';
+import { Pagination } from '../pagination/Pagination';
 import { Link } from 'react-router-dom';
 
 export const TableResults = ({
@@ -21,6 +22,8 @@ export const TableResults = ({
     paginate
 }) => {
 
+
+    /******* Display country flag depending on league ******/
     const flags = (competition) => {
         switch (competition) {
             case 'Serie A':
@@ -39,17 +42,20 @@ export const TableResults = ({
                 return <img className='png-icon-results' src={netherlands} alt='icon-flag' />
             case 'Primeira Liga':
                 return <img className='png-icon-results' src={portugal} alt='icon-flag' />
+            case 'UEFA Champions League':
+                return <img className='png-icon-results' style={{ width: '40px' }} src={championsLeague} alt='icon-flag' />
             default: console.log('Default');
         }
     }
 
-    const halfTimeStatus = (halfTimeStatus) => {
-        if (halfTimeStatus === 'FINISHED') {
+    /*********** Display football match status  ***********/
+    const checkMatchStatus = (matchStatus) => {
+        if (matchStatus === 'FINISHED') {
             return <div className='halfTime-status'>
                 <span>END</span>
             </div>
         }
-        else if (halfTimeStatus === 'PAUSED') {
+        else if (matchStatus === 'PAUSED') {
             return <div className='halfTime-status'>
                 <span>HT</span>
             </div>
@@ -63,12 +69,14 @@ export const TableResults = ({
             {/* Calendar */}
             <div className='calendar-div'>
                 <h3 className='schedule-p'>Schedule, upcoming matches & <span>live scores.</span></h3>
-                <div>
+                <p>Click on one particular match to see his statistic</p>
+                <div className='calendar-content'>
                     <Calendar handleDate={handleDate} date={date} />
                 </div>
             </div>
 
-            {matchesLength <= 0 ? <div style={{ textAlign: 'center' }}><p className='no-matches'>Today not has matches, please select another day...</p></div> : null}
+            {/* Display alert if today not has football matches */}
+            {!matchesLength ? <div style={{ textAlign: 'center' }}><p className='no-matches'>Today not has matches, please select another day...</p></div> : null}
 
             {/* Table Start */}
             <Table striped hover className='table-component' >
@@ -81,10 +89,12 @@ export const TableResults = ({
                                     {moment(match.utcDate).format('HH:mm')}<br />{match.country}
                                 </td>
 
-                                <Link className='match-link' to={`head2head/${match.id}`}>
-                                    <td className='td-content'>
+                                <td className='td-content'>
+                                    <Link className='match-link' to={`head2head/${match.id}`}>
                                         <div className='flag-homeTeam' >
                                             <div className='icon-country'>
+
+                                                {/***** Display country flag depending on league *****/}
                                                 {flags(match.competition.name)}
 
                                             </div>
@@ -93,6 +103,7 @@ export const TableResults = ({
                                             </div>
                                         </div>
                                         <div className='scores '>
+
                                             {/* Animation for matches who going live*/}
                                             <div className={match.status === 'IN_PLAY' ? 'animated infinite flash slower' : null}>
                                                 <span className='homeScore'>{match.score.fullTime.homeTeam}</span> -&nbsp;
@@ -109,9 +120,11 @@ export const TableResults = ({
                                         <div className='away-team-name'>
                                             <span>{match.awayTeam.name}</span>
                                         </div>
-                                        {halfTimeStatus(match.status)}
-                                    </td>
-                                </Link>
+
+                                        {/***  Display football match status ***/}
+                                        {checkMatchStatus(match.status)}
+                                    </Link>
+                                </td>
                             </tr>
                         )
                     })}

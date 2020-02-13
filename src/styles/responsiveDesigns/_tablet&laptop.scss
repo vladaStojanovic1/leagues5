@@ -1,0 +1,132 @@
+
+@media screen and (min-width:'620px') and (max-width:'1015px'){
+   
+    .leagues-links{
+
+        .descriptions-p{
+            text-align: center;
+        }
+    }
+
+    .schedule-p{
+        font-size: 33px;
+    }
+    .calendar{
+        background: lightseagreen;
+        border: none;
+    }
+    .my-carousel{
+        width: 95%;
+    }
+    .best-players{
+        margin-top: 60px;
+    }
+    .best-players-content{
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+
+        .ronaldo{
+            div:nth-child(1){
+                order: 2;
+            }
+            div:nth-child(2){
+                order: 1;
+            }
+            img{
+                width: 290px;
+            }
+        }
+
+        .messi{
+            div:nth-child(1){
+                order: 2;
+            }
+            img{
+                width: 300px;
+            }
+        }
+    }
+
+    .links-footer{
+        text-align: center;
+    }
+    .input-footer{
+        text-align: center;
+
+        input{
+            text-align: center;
+        }
+        button{
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
+    .adress-footer{
+        p{
+            text-align: center;
+        }
+    }
+    .other-leagues-divs{
+        grid-template-columns: repeat(auto-fit, minmax(361px, 1fr));
+    }
+
+    .other-leagues-content{
+        width: 100%;
+    }
+
+    .leagueName-icon{
+        margin-bottom: 50px;
+
+        img{
+            width: 190px !important;
+        }
+    }
+
+    .scorers-icon{
+        margin-bottom: 40px;
+    }
+    .scorers-standings{
+        margin-bottom: 40px;
+    }
+
+    .championsLeague-section{
+        padding-top: 0 !important;
+    }
+    .championsLeague-icon{
+        img{
+            width: 150px !important;
+        }
+    }
+
+    .teams-name{
+        p{
+            font-size: 13px;
+        }
+    }
+
+    .stadium-content{
+        width: 100% !important;
+        .home, .away{
+            font-size: 38px;
+            width: 55px;
+            height: 55px;
+            line-height: 1.4;
+        }
+
+        .match-status{
+            // left: 250px !important;
+
+            font-size: 15px;
+        }
+    }
+    .head2head{
+        width: 70%;
+
+        h2{
+            font-size: 22px;
+        }
+    }
+
+}

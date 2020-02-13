@@ -107,14 +107,14 @@
     }
     img{
         margin: auto;
-        filter: drop-shadow(1px 1px 5px white);
         margin-bottom: 13px;
+        width: 115px !important;
     }
     span{
         font-family: 'Patrick Hand', cursive;
         font-weight: bold;
         letter-spacing: 4px;
-        color: $my-white;
+        color: lightgreen;
         border: 1px solid white;
         padding: 0 5px 0 5px
     }

@@ -1,6 +1,10 @@
 /******** Champions League Start *********/
 @import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
 
+.championsLeague-section{
+     padding-top: 32px;
+     padding-bottom: 45px;
+}
 .champion-league-content{
     width: 90%;
     margin: auto;
@@ -22,7 +26,7 @@
 }
 .cl-content{
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr;
     align-items: center;
 }
 .cl-imgAndPostion{
@@ -86,6 +90,14 @@
             margin-bottom: 0 !important;
             color: $my-silver;
             font-family: $sarabun-font;
+            width: 20px;
+            height: 20px;
+            background: #17a2b8;
+            line-height: 1.2;
+            text-align: center;
+            border-radius: 50%;
+            color: white;
+            font-weight: bold;
         }
     }
 /******** Champions League Start *********/
@@ -113,14 +125,14 @@
     }
     img{
         margin: auto;
-        filter: drop-shadow(1px 1px 5px white);
         margin-bottom: 13px;
+        width: 115px !important;
     }
     span{
         font-family: 'Patrick Hand', cursive;
         font-weight: bold;
         letter-spacing: 4px;
-        color: $my-white;
+        color: lightgreen;
         border: 1px solid white;
         padding: 0 5px 0 5px;
         font-size: 31px;

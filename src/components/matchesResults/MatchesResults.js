@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment';
-import { TableResults } from '../TableResults';
+import { TableResults } from '../../components/tableResults/TableResults';
 import { LoaderClock } from '../clockLoader/LoaderClock';
 import { requestHeader } from '../requestHeader';
 

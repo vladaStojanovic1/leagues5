@@ -12,15 +12,15 @@ export const DisplayOtherCompetitions = ({ teams, competitionName }) => {
     const checkLeagueName = () => {
         switch (competitionName) {
             case 'Premier League':
-                return <img style={{ width: '100px' }} src={premierLeague} alt='league-name-icon' />
+                return <img src={premierLeague} alt='league-name-icon' />
             case 'Serie A':
-                return <img style={{ width: '60px' }} src={serieA} alt='league-name-icon' />
+                return <img src={serieA} alt='league-name-icon' />
             case 'Primera Division':
-                return <img style={{ width: '60px' }} src={primeraDivision} alt='league-name-icon' />
+                return <img src={primeraDivision} alt='league-name-icon' />
             case 'Bundesliga':
-                return <img style={{ width: '60px' }} src={bundesliga} alt='league-name-icon' />
+                return <img src={bundesliga} alt='league-name-icon' />
             case 'Ligue 1':
-                return <img style={{ width: '60px' }} src={ligue1} alt='league-name-icon' />
+                return <img src={ligue1} alt='league-name-icon' />
             default: console.log('default');
         }
     }

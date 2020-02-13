@@ -11,7 +11,8 @@ export const Calendar = ({ handleDate, date }) => {
                 value={date}
                 clearIcon={null}
                 className='calendar'
-                calendarIcon={<img src={calendar} alt='sa' style={{ width: '30px' }} />}
+                calendarIcon={<img src={calendar} alt='calenda' style={{ width: '30px' }} />}
+                format={'dd/MM/yyyy'}
             />
         </div>
     )
