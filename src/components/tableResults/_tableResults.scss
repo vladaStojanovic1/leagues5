@@ -12,9 +12,7 @@
     padding: 0 0 0 10px !important;
 }
 .td-content{
-    // @include display-grid(6);
     padding: 0 !important;
-    // font-family: 'Sarabun', sans-serif;
 }
 .flag-homeTeam{
     @include display-grid(5);
@@ -34,7 +32,6 @@
         color: $my-white;
     }
     .calendar-content{
-        //  style={{ gridRow: '3/4' }}
         grid-row: 3/4;
     }
 }
@@ -96,20 +93,13 @@
 }
 
 .match-link{
+    @include display-grid(6);
+    padding: 0 !important;
+    font-family: 'Sarabun', sans-serif;
+    
     &:focus, &:hover, &:visited, &:link, &:active {
         text-decoration: none;
         color: $my-black;
     }
 
-
-    // display: grid;
-    // grid-template-columns: repeat(6, 1fr);
-    // align-items: center;
-    // padding: 0 !important;
-    // font-family: 'Sarabun', sans-serif;
-
-
-     @include display-grid(6);
-    padding: 0 !important;
-    font-family: 'Sarabun', sans-serif;
 }

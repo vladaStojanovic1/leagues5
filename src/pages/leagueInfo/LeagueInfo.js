@@ -19,39 +19,38 @@ export const LeagueInfo = ({ match }) => {
     /****** State ******/
 
     useEffect(() => {
+
+        /************ League Standings Data *************/
         const teamsStandings = async () => {
-
             setLoading(true)
-            const data = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/standings`, requestHeader);
-            const res = await data.json();
+            const response = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/standings`, requestHeader);
+            const data = await response.json();
 
-            const teams = res.standings[0].table.map((team) => {
+            const teams = data.standings[0].table.map((team) => {
                 return new TeamInfo(team)
             })
-            const filterGroups = res.standings.filter((team) => {
+            const filterGroups = data.standings.filter((team) => {
                 return team.type === 'TOTAL';
             })
             setChampionsLeagueGroups(filterGroups)
             setTeams(teams);
-            setCompetitionName(res.competition.name);
+            setCompetitionName(data.competition.name);
             setLoading(false)
         }
 
+        /************ Scorer Standings Data *************/
         const scorersStandings = async () => {
+            const response = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/scorers`, requestHeader);
+            const data = await response.json();
 
-            const data = await fetch(`https://api.football-data.org/v2/competitions/${match.params.id}/scorers`, requestHeader);
-            const res = await data.json();
-
-            const scorers = res.scorers.map((scorer) => {
+            const scorers = data.scorers.map((scorer) => {
                 return new ScorerInfo(scorer)
             })
             setScorersStandings(scorers)
         }
         teamsStandings();
         scorersStandings();
-    }, [])
-
-    console.log(competitionName);
+    }, [match.params.id])
 
 
     return (

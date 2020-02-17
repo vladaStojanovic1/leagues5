@@ -31,7 +31,7 @@ export const MyCarousel = () => {
     return (
         <div className='my-carousel'>
 
-            <div className='carousel-title' style={{ display: 'flex', alignItems: 'center' }}>
+            <div className='carousel-title'>
                 <h3>Check out champions from the last season in <span className='topLeagues-span'>TOP leauges</span></h3>
                 <IoIosArrowDropdown color={'lightgreen'} />
 
@@ -45,7 +45,6 @@ export const MyCarousel = () => {
                 infinite={true}
                 autoPlay={true}
                 autoPlaySpeed={3000}
-                // removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
             >
@@ -53,11 +52,10 @@ export const MyCarousel = () => {
                 {myData.map((team, index) => {
                     return (
                         <div className='carousel-div' key={index}>
-
                             <div className='carousel-content' >
 
                                 <div className='carousel-image-spans'>
-                                    <img src={team.teamImg} alt="team-image" />
+                                    <img src={team.teamImg} alt="team" />
 
                                     {team.won ?
                                         <div className='w-d-l'>
@@ -69,7 +67,7 @@ export const MyCarousel = () => {
                                 </div>
 
                                 <div className='carousel-season-image'>
-                                    <img src={team.leagueImg} alt="league-image" />
+                                    <img src={team.leagueImg} alt="league" />
                                     <p>{team.season}</p>
                                 </div>
 

@@ -62,7 +62,6 @@ export const TableResults = ({
         }
     }
 
-
     return (
         <div className='table' >
 

@@ -12,19 +12,21 @@ export const Head2Head = ({ match }) => {
     useEffect(() => {
         const getMatchInfo = async () => {
             setLoading(true)
-            const data = await fetch(`https://api.football-data.org/v2/matches/${match.params.id}`, requestHeader)
-            const res = await data.json();
+            const response = await fetch(`https://api.football-data.org/v2/matches/${match.params.id}`, requestHeader)
+            const data = await response.json();
+            console.log(data.head2head);
 
-            const matchInfo = new MatchInfo(res)
+            const matchInfo = !data.head2head ? data : new MatchInfo(data)
             setMatchInfo(matchInfo)
             setLoading(false)
         }
         getMatchInfo()
-    }, [])
+    }, [match.params.id])
 
+    console.log(matchInfo);
 
     return (
-        <div style={{ minHeight: '100vh' }}>
+        <div className='head2head-section'>
             {loading ? <LoaderBounce /> : <DisplayHead2Head matchInfo={matchInfo} />}
         </div>
     )

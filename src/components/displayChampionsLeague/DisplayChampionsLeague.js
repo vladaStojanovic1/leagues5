@@ -1,6 +1,8 @@
 import React from 'react'
 import { Table } from 'react-bootstrap';
-import championsLeague from '../../img/championsLeague.png'
+import championsLeague from '../../img/championsLeague.png';
+import Spin from 'react-reveal/Spin';
+
 
 export const DisplayChampionsLeague = ({ championsLeagueGroups, competitionName }) => {
 
@@ -8,8 +10,10 @@ export const DisplayChampionsLeague = ({ championsLeagueGroups, competitionName 
         <div className='championsLeague-section' >
 
             <div className='championsLeague-icon'>
-                <img src={championsLeague} alt="" style={{ width: '70px' }} />
-                <p style={{ color: 'white', fontSize: '21px', marginBottom: '0' }}><span>{competitionName}</span> standings</p>
+                <Spin>
+                    <img src={championsLeague} alt="champions-league" />
+                </Spin>
+                <p><span>{competitionName}</span> standings</p>
             </div>
 
             <div className='champions-league' >

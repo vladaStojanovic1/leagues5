@@ -10,8 +10,6 @@
         font-size: 30px;
         text-align: start;
         font-weight: bold;
-        // background: linear-gradient(45deg, white, transparent);
-        // color: black !important;
         color: $my-white;
         padding-left: 15px;
         border-radius: 10px;
@@ -22,12 +20,10 @@
 }
 
 .carousel-div{
-    // background: linear-gradient(138deg, #d8d8d8, transparent);
     background: aliceblue;
     opacity: 0.8;
     border-radius: 20px;
     margin: 10px;
-    // cursor: pointer;
 }
 
 .carousel-content{
@@ -89,4 +85,9 @@ svg {
     color: #33c24a;
     font-size: 32px;
     margin-left: 10px;
+}
+
+.carousel-title{
+    display: flex;
+    align-items: center;
 }

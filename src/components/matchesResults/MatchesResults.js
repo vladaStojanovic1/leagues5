@@ -11,6 +11,7 @@ export const MatchesResults = () => {
     const [matches, setMatches] = useState([]);
     const [date, setDate] = useState(new Date());
     const [loading, setLoading] = useState(true);
+
     // Pagination
     const [currentPage, setCurrentPage] = useState(1);
     const [matchesPerPage] = useState(10);
@@ -22,11 +23,11 @@ export const MatchesResults = () => {
 
         const fetchMatches = async () => {
             setLoading(true);
-            const data = await fetch(`https://api.football-data.org/v2/matches?dateFrom=${currentDay}&dateTo=${currentDay}`, requestHeader);
-            const res = await data.json();
+            const response = await fetch(`https://api.football-data.org/v2/matches?dateFrom=${currentDay}&dateTo=${currentDay}`, requestHeader);
+            const data = await response.json();
 
             if (mounted) {
-                setMatches(res.matches);
+                setMatches(data.matches);
                 setLoading(false);
             }
         }

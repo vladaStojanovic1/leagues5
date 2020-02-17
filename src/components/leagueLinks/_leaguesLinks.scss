@@ -49,7 +49,6 @@
     font-weight: bold;
 }
 .span-leagues{
-    // font-weight: bold;
     font-size: 17px;
     color: white;
     font-family: 'Barrio', cursive;
@@ -59,7 +58,7 @@
 
 
  
-/* Rectangle Out */
+/* Rectangle Out Animation */
 .hvr-rectangle-out {
     display: inline-block;
     vertical-align: middle;
@@ -67,7 +66,6 @@
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
-    // background: #e1e1e1;
     -webkit-transition-property: color;
     transition-property: color;
     -webkit-transition-duration: 0.3s;
@@ -100,9 +98,7 @@
   }
   
 
-
-
-  /* Icon Rotate */
+  /* Icon Rotate Animation */
 .hvr-icon-rotate {
   display: inline-block;
   vertical-align: middle;

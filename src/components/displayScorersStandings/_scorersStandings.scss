@@ -1,6 +1,4 @@
-// @import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
-// @import url('https://fonts.googleapis.com/css?family=Contrail+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Jua&display=swap');
 
 
@@ -120,7 +118,6 @@ p{
     span{
         font-weight: bold;
         letter-spacing: 2px;
-        // text-decoration: underline;
         color: $my-white;
         border: 1px solid white;
         padding: 0 5px 0 5px;
@@ -134,4 +131,10 @@ p{
     .top-scorers{
         color: lightgreen;
     }
+}
+
+.numScores{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
 }

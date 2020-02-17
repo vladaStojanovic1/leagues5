@@ -49,7 +49,7 @@ img{
 }
 .match-status{
     position: absolute;
-    left: 703px;
+    left: 690px;
     bottom: 26px;
     font-size: 22px;
     border-radius: 20px;
@@ -71,7 +71,6 @@ img{
         text-transform: uppercase;
         padding:5px 0 5px 0;
         color: $my-white;
-        // background: linear-gradient(45deg, #000000, transparent);
         background: linear-gradient(180deg, #dc3545, transparent);
 
         border-radius: 30px;
@@ -150,9 +149,7 @@ img{
     }
     .total-goals{
         padding-top: 40px;
-
         span{
-
             font-size: 30px;
             background: #12a1f9;
             font-size: 30px;
@@ -175,6 +172,7 @@ img{
 }
 
 
+// Results on stadium image (responsive design)
 @media only screen and (max-width:'1350px'){
 .home{
     left: 248px !important;

@@ -11,12 +11,17 @@ import { Link } from 'react-router-dom';
 export const LeaguesLinks = () => {
 
     /*********** Change HOVER effect on Tablet mode  ***************/
-    const [isTablet, setIsTablet] = useState('');
+    const [isTablet, setIsTablet] = useState();
 
     useEffect(() => {
-        window.addEventListener('resize', () => {
-            setIsTablet(window.innerWidth < 800)
-        })
+        const tabletWidth = () => {
+            setIsTablet(window.innerWidth < 800);
+        }
+        window.addEventListener('resize', tabletWidth);
+
+        return () => {
+            window.removeEventListener('resize', tabletWidth);
+        }
     }, [isTablet])
     const animationClass = isTablet ? 'hvr-rectangle-out' : 'hvr-icon-rotate';
     /*********** Change HOVER effect on Tablet mode  ***************/

@@ -5,10 +5,13 @@ import serieA from '../../img/serie a 1.png';
 import primeraDivision from '../../img/la liga 1.png';
 import bundesliga from '../../img/Bundesliga 2.png';
 import ligue1 from '../../img/france ligue2.png';
-// import championsLeague from '../../img/championsLeague.png';
+import Spin from 'react-reveal/Spin';
+
+
 
 export const DisplayOtherCompetitions = ({ teams, competitionName }) => {
 
+    /********* Display League image depending on league **********/
     const checkLeagueName = () => {
         switch (competitionName) {
             case 'Premier League':
@@ -29,9 +32,12 @@ export const DisplayOtherCompetitions = ({ teams, competitionName }) => {
     return (
         <div className='other-teams'>
             <div className='leagueName-icon'>
-                {checkLeagueName()}
+
+                {/* Display League image depending on league */}
+                <Spin>{checkLeagueName()}</Spin>
                 <p><span>{competitionName}</span> standings</p>
             </div>
+
             <Table striped >
                 <tbody style={{ background: 'azure' }}>
                     {teams.map((team, index) => {
@@ -43,7 +49,7 @@ export const DisplayOtherCompetitions = ({ teams, competitionName }) => {
                                         <div>
                                             <h4 className='positionNum'>{team.position}</h4>
                                         </div>
-                                        <img src={team.image} alt="team-image" />
+                                        <img src={team.image} alt="team" />
                                     </div>
                                     <div className='team-name'>
                                         <p>{team.name}</p>
